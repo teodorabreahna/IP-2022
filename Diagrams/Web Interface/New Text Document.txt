@@ -1,0 +1,5 @@
+2 strings input through JSON
+
+{
+        "concepts":["Concept1", "concept2", "concept3"]
+}
