@@ -1,0 +1,7 @@
+Trello:	https://trello.com/invite/b/asoxhRZT/71c61522ca5afdaa7d6b8388d1d01ead/project-management
+
+2 strings input through JSON
+
+{
+        "concepts":["Concept1", "concept2", "concept3"]
+}
