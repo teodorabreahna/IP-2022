@@ -1,0 +1,23 @@
+<diagram program="umletino" version="14.3.0"><zoom_level>10</zoom_level><element><id>UMLClass</id><coordinates><x>390</x><y>50</y><w>210</w><h>160</h></coordinates><panel_attributes>Processor
+--
+-Name: string
+-DeviceID: string
+-CurrentUtilization: int
+--
++Processor(n:string)
++getName(): string
++getDeviceID(): string
++getCurrentUtilizaton(): int
++getInfoFromCrawel()
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>200</x><y>440</y><w>210</w><h>90</h></coordinates><panel_attributes>DataBase
+--
+-Composite: string
+-Key: string
+--
++writesFrom()
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>600</x><y>430</y><w>210</w><h>70</h></coordinates><panel_attributes>Natural Language Processor
+--
+-nlp_tool: NLPTool
+--
++uses(p:Proccesor)
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>480</x><y>200</y><w>30</w><h>110</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;90</additional_attributes></element><element><id>Relation</id><coordinates><x>480</x><y>280</y><w>230</w><h>30</h></coordinates><panel_attributes>lt=-</panel_attributes><additional_attributes>210;10;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>680</x><y>280</y><w>30</w><h>170</h></coordinates><panel_attributes>lt=-</panel_attributes><additional_attributes>10;150;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>290</x><y>280</y><w>230</w><h>30</h></coordinates><panel_attributes>lt=-</panel_attributes><additional_attributes>210;10;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>290</x><y>280</y><w>30</w><h>180</h></coordinates><panel_attributes>lt=-</panel_attributes><additional_attributes>10;160;10;10</additional_attributes></element></diagram>
