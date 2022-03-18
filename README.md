@@ -5,7 +5,7 @@ Generate statistics for two concepts (common information and different informati
 Example: man vs woman, gender differences
 
 Each team created a Trello Board for managing their tasks:
-1. Web Interface: 
-2. Crawler:
-3. Data Processing:
+1. Web Interface: https://trello.com/b/asoxhRZT/web-interface
+2. Crawler: https://trello.com/b/KuPH34Ot/ip-crawler
+3. Data Processing: https://trello.com/b/buCno7jI/se-data-processing
 4. Statistics: https://trello.com/b/NbELmNg3/ip-statistics
