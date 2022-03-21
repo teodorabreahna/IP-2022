@@ -1,4 +1,4 @@
-We build a database in wich we have a table with the folllowing fields: 
+We build a database in which we have a table with the folllowing fields: 
 concept and its attributes (frequncy, word type, association words etc)
 Then, the application generates a statistic based on what type of statistic we choose to see and on our input (2 concepts, just one concept, top 10 words searched etc)
 
@@ -17,7 +17,7 @@ Sound of waves	   Sound of wind
 2. INPUT: travelling
 OUTPUT: 
 Definition: going or being transported from place to place.
-Related words: journey,peregrinate,tour,trek,trip,voyage.
+Related words: journey, car, lagguage, mountain, sea, photos, tour, trek, trip, voyage.
 
 3. INPUT: 5 most searched words (+ probability)
 OUTPUT: 
