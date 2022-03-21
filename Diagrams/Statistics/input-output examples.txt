@@ -1,0 +1,9 @@
+We build a database in wich we have a table with the folllowing fields: 
+concept and its attributes (frequncy, word type, association words etc)
+Then, the application generates a statistic based on what type of statistic we choose to see and on our input (2 concepts, just one concept, top 10 words searched etc)
+
+1. INPUT: 	mountain vs sea
+-> Andes Alps Massif Foothill Peak Climber Rocky Himalayas Bike Range Uplift Everest Scenery Rockies Cascade Yellowstone Mount Tops Hike Torrent Mountaineer Ascent Steppe Nevada Mont Climb Trapper Fir Terrain Valley Upland Skiing Highlands Shan Altitude Desert Wilderness Pine Volcano Meadow Waterfall Canyon Promontory Snowfall Pass Snow
+-> Coastline Shoreline Lagoon Canoe Shore Cove Sand Boat Landing Whale Reef Gravel Coast Harbour Ocean Peninsula Sea Island Surfing Surf Laguna Palm Sinking Dune Volleyball Surfer Newport Erosion Miami Bathing Resort Ship Florida Vessel Sediment Long Estuary Boat Tourist Chesapeake Marina Pier Causeway Cliff
+2. INPUT: travelling
+3. INPUT: 10 most searched words
