@@ -5,7 +5,7 @@ Then, the application generates a statistic based on what type of statistic we c
 1. INPUT: 	mountain vs beach
 
 OUTPUT: common words
--> tourism, scenary, relaxing, 
+-> trip ,tourism, scenary, relaxing, family, summer
 
 
 OUTPUT: related words
