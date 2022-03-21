@@ -8,11 +8,14 @@ OUTPUT: related words
 -> Coastline Shoreline Lagoon Canoe Shore Cove Sand Boat Landing Whale Reef Gravel Coast Harbour Ocean Peninsula Sea Island Surfing Surf Laguna Palm Sinking Dune Volleyball Surfer Newport Erosion Miami Bathing Resort Ship Florida Vessel Sediment Long Estuary Boat Tourist Chesapeake Marina Pier Causeway Cliff
 
 2. INPUT: travelling
+OUTPUT: 
+Definition: going or being transported from place to place.
+Related words: journey,peregrinate,tour,trek,trip,voyage.
 
 3. INPUT: 5 most searched words (+ probability)
 OUTPUT: 
-- weather 
-- animal
-- food
-- cars
-- football
+- weather (8,67%)
+- animal (8,21%)
+- food (5,03%)
+- cars (4,64%)
+- football (4,54%)
