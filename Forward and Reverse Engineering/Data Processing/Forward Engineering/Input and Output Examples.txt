@@ -1,0 +1,51 @@
+- Procesor:
+	- Example 1:
+		- Input:
+			This is a message. :))
+		- Output:
+			- nouns: message
+			- verbs: is
+			- pronouns: this
+			- articles: a
+			
+	- Example 2:
+		- Input:
+			This is a message. It is a very short one. 
+		- Output:
+			- nouns: message
+			- verbs: is x 2
+			- pronouns: this, it
+			- articles: a x 2
+			- adjectives: short, very, one
+			
+	- Example 3:
+		- Input:
+			You can find the IP course at the following address: https://profs.info.uaic.ro/~adiftene/Scoala/2022/IP/index.html.
+		- Output:
+			- nouns: IP, course, address
+			- verbs: can, find
+			- pronouns: You
+			- articles: the x 2
+			- prepositions: at
+			- adjectives: following
+
+
+- Natural Language Processor:
+
+	- Example 1:
+		- Input:
+			This is a message. :))
+		- Output:
+			This is a message
+			
+	- Example 2:
+		- Input:
+			This is a message. It is a very short one. 
+		- Output:
+			This is a message It is a very short one
+			
+	- Example 3:
+		- Input:
+			You can find the IP course at the following address: https://profs.info.uaic.ro/~adiftene/Scoala/2022/IP/index.html.
+		- Output:
+			You can find the IP course at the following address
