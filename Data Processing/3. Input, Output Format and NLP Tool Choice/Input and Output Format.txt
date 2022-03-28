@@ -15,20 +15,20 @@
                         {
                           "concept":[
                                      {
-                                       "Adjectives" : (Natural, 1), ...
-                                       "Nouns" : (language,1), (processing,1), (NLP,2) ...
-                                       "Verbs" : (is, 1), ...
-                                       "Pronouns" : (they, 2), ...
+                                       "Adjectives" : (Natural), ...
+                                       "Nouns" : (language), (processing), (NLP) ...
+                                       "Verbs" : (is), ...
+                                       "Pronouns" : (they), ...
                                        "Adverbs" : ...
                                      }
                                     ]
                         }
 			- Lists: 
-				- Adjectives<String word, int frequency> :{ (Natural, 1), …}
-				- Nouns<String word, int frequency>: {(language,1), (processing,1), (NLP,2) ...}
-				- Verbs<String word, int frequency>: {(is, 1), …}
-				- Pronouns<String word, int frequency>: {...}
-				- Adverbs<String word, int frequency>:{...}
+				- Adjectives<String word> :{ (Natural), …}
+				- Nouns<String word>: {(language), (processing), (NLP) ...}
+				- Verbs<String word>: {(is), …}
+				- Pronouns<String word>: {...}
+				- Adverbs<String word>:{...}
 
 
 
