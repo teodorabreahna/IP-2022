@@ -12,9 +12,24 @@
 		- Format:
 		
 			- JSON file where we have concepts, every concept has a list of nouns, adjectives, etc.
+                        {
+                          "concept":[
+                                     {
+                                       "Adjectives" : (Natural, 1), ...
+                                       "Nouns" : (language,1), (processing,1), (NLP,2) ...
+                                       "Verbs" : (is, 1), ...
+                                       "Pronouns" : (they, 2), ...
+                                       "Adverbs" : ...
+                                     }
+                                    ]
+                        }
 			- Lists: 
 				- Adjectives<String word, int frequency> :{ (Natural, 1), …}
 				- Nouns<String word, int frequency>: {(language,1), (processing,1), (NLP,2) ...}
 				- Verbs<String word, int frequency>: {(is, 1), …}
 				- Pronouns<String word, int frequency>: {...}
 				- Adverbs<String word, int frequency>:{...}
+
+
+
+
