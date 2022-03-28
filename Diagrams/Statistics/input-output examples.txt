@@ -1,0 +1,32 @@
+We build a database in which we have a table with the folllowing fields: 
+concept and its attributes (frequncy, word type, association words etc)
+Then, the application generates a statistic based on what type of statistic we choose to see and on our input (2 concepts, just one concept, top 10 words searched etc)
+
+1. INPUT: 	mountain vs beach
+
+OUTPUT: common words
+-> trip ,tourism, scenary, relaxing, family, summer
+
+
+OUTPUT: related words
+-> Andes Alps Massif Foothill Peak Climber Rocky Himalayas Bike Range Uplift Everest Scenery Rockies Cascade Yellowstone Mount Tops Hike Torrent Mountaineer Ascent Steppe Nevada Mont Climb Trapper Fir Terrain Valley Upland Skiing Highlands Shan Altitude Desert Wilderness Pine Volcano Meadow Waterfall Canyon Promontory Snowfall Pass Snow
+-> Coastline Shoreline Lagoon Canoe Shore Cove Sand Boat Landing Whale Reef Gravel Coast Harbour Ocean Peninsula Sea Island Surfing Surf Laguna Palm Sinking Dune Volleyball Surfer Newport Erosion Miami Bathing Resort Ship Florida Vessel Sediment Long Estuary Boat Tourist Chesapeake Marina Pier Causeway Cliff
+
+OUTPUT: differences
+BEACH	           MOUNTAINS
+Humid Air	   Fresh, dry air
+Water Views	   Long Views
+Sound of waves	   Sound of wind
+
+2. INPUT: travelling
+OUTPUT: 
+Definition: going or being transported from place to place.
+Related words: journey, car, lagguage, mountain, sea, photos, tour, trek, trip, voyage.
+
+3. INPUT: 5 most searched words (+ probability)
+OUTPUT: 
+- weather (8,67%)
+- animal (8,21%)
+- food (5,03%)
+- cars (4,64%)
+- football (4,54%)

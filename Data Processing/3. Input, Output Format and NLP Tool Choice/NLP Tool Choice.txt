@@ -1,0 +1,10 @@
+
+	- NLP Tools - options:
+	
+		- MonkeyLearn 
+		- IBM Watson
+		- NLTK
+
+	- Our choice:
+		
+		- MonkeyLearn
