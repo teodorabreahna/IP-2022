@@ -1,9 +1,10 @@
-The Top 3 NLP Tools
 
-Options:
-1. MonkeyLearn 
-2. IBM Watson
-3. NLTK
+	- NLP Tools - options:
+	
+		- MonkeyLearn 
+		- IBM Watson
+		- NLTK
 
-Our choice:
-MonkeyLearn
+	- Our choice:
+		
+		- MonkeyLearn
