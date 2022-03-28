@@ -6,14 +6,12 @@ Natural language processing is an essential part of many types of technology, in
 
 
 Output:
-Format: array of arrays of strings
+Format: JSON file where we have concepts, every concept has a list of nouns, adjectives, etc.
 
 
-Adjectives<Array of Strings> :{ ‘Natural’, …}
-Nouns<Array of Strings>: {‘language’, ‘processing’, ...}
-Verbs<Array of Strings>: {‘is’, …}
-Pronouns<Array of Strings>: {...}
-Adverbs<Array of Strings>:{...}
-
-
-Words<Array of Arrays of Strings>: {{Adjectives}, {Nouns}, {Verbs}, {Pronouns}, {Adverbs}}
+Lists: 
+Adjectives<String word, int frequency> :{ (Natural, 1), …}
+Nouns<String word, int frequency>: {(language,1), (processing,1), (NLP,2) ...}
+Verbs<String word, int frequency>: {(is, 1), …}
+Pronouns<String word, int frequency>: {...}
+Adverbs<String word, int frequency>:{...}
