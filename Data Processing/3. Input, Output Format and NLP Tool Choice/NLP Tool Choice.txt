@@ -1,8 +1,9 @@
 The Top 3 NLP Tools
 
-1. MonkeyLearn
-MonkeyLearn is a user-friendly, NLP-powered platform that helps you gain valuable insights from your text data. To get started, you can try one of the pre-trained models, to perform text analysis tasks such as sentiment analysis, topic classification, or keyword extraction. For more accurate insights, you can build a customized machine learning model tailored to your business. 
+Options:
+1. MonkeyLearn 
 2. IBM Watson
-IBM Watson allows you to identify and extract keywords, categories, emotions, entities, and more. It’s versatile, in that it can be tailored to different industries, from healthcare to finance, and has a trove of documents to help you get started.
 3. NLTK
-The Natural Language Toolkit (NLTK)  is bolstered by an active community, as well as a range of tutorials for language processing, sample datasets, and resources that include a comprehensive Language Processing and Python handbook. With a modular structure, NLTK provides plenty of components for NLP tasks, like tokenization, tagging, stemming, parsing, and classification, among others.
+
+Our choice:
+MonkeyLearn
