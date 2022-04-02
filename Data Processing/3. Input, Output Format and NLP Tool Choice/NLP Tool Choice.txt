@@ -7,4 +7,6 @@
 
 	- Our choice:
 		
-		- MonkeyLearn
+		- MonkeyLearn:
+
+			- API: https://app.monkeylearn.com/main/classifiers/cl_8bAUEwq5/tab/api/

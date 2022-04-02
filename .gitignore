@@ -1,0 +1,8 @@
+# Files to Ignore
+
+
+# Data Processing Team's Ignored Files
+*.project
+*.classpath
+*.prefs
+*.class
