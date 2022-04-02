@@ -1,0 +1,43 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color:  #333;
+    height: 70px;
+    font-size: 120%;
+}
+
+li{
+    float : right;
+    list-style-type: none;
+}
+
+li a{
+    text-decoration: none;
+    display: block;
+    padding: 14px 16px;
+    color: white;
+    margin-right: 30px;
+}
+
+li a:hover {
+    background-color: #111;
+  }
+
+.title h2{
+    color: white;
+}
+
+.msg h3{
+    text-align: center;
+}
+
+.search-bars{
+    text-align: center;
+}
