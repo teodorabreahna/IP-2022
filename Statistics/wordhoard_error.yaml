@@ -1,0 +1,4 @@
+2022-04-03 12:39:47:wordhoard.utilities.basic_soup:ERROR: Response Status Code: 403
+2022-04-03 12:39:47:wordhoard.utilities.basic_soup:ERROR: HTTP 403 is an HTTP status code meaning access to the requested resource is forbidden.
+2022-04-03 12:39:47:wordhoard.utilities.basic_soup:ERROR: Associated URL: https://www.collinsdictionary.com/dictionary/english-thesaurus/travelling
+2022-04-03 12:39:47:wordhoard.dictionary:ERROR: Collins Dictionary had no definition reference for the word travelling
