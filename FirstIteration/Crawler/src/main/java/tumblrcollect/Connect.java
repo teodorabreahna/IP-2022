@@ -1,13 +1,12 @@
 package tumblrcollect;
 
 import com.tumblr.jumblr.JumblrClient;
-import com.tumblr.jumblr.types.Post;
 import com.tumblr.jumblr.types.User;
 
 import java.util.List;
 
 public class Connect {
-    public void newClient(){
+    public JumblrClient newClient(){
 
         /**
          * The authentication to the API.
@@ -23,9 +22,6 @@ public class Connect {
         );
         User user = client.user();
         System.out.println(user.getName());
-
-        /*for(Post post : client.tagged("lol")){
-            post.getId();
-        }*/
+        return client;
     }
 }
