@@ -6,11 +6,15 @@
 
 .navbar {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+    width: 80%;
     align-items: center;
     background-color:  #333;
-    height: 70px;
+    height: 10vh;
     font-size: 120%;
+    width: auto;
+    font-family: 'Palette Mosaic', cursive;
+    position: sticky;
 }
 
 li{
@@ -24,14 +28,27 @@ li a{
     padding: 14px 16px;
     color: white;
     margin-right: 30px;
+    letter-spacing: 5px;
 }
 
 li a:hover {
     background-color: #111;
   }
 
+  .title{
+      display: flex;
+      justify-content: space-between;
+  }
+
+  .title img{
+      width: 60px;
+      height: 50px;
+  }
+  
+
 .title h2{
     color: white;
+    letter-spacing: 4px;
 }
 
 .msg h3{
@@ -40,4 +57,71 @@ li a:hover {
 
 .search-bars{
     text-align: center;
+}
+
+.im-pr{
+    background-color: #56C6D4;
+    display: flex;
+}
+
+.im-pr img{
+    height: 90vh;
+    left: -220px;
+    position: relative;
+   
+}
+
+.mess1{
+    color: #D46456;
+    font-size: 245%;
+    margin-top: 8vh;
+    text-align: center;
+    margin-right: 15vh;
+}
+
+.mess2{
+    color: #636363;
+    font-size: 145%;
+    margin-top: 8vh;
+    text-align: center;
+    margin-right: 15vh;
+}
+
+.mess3{
+    color: #FFFFFF;
+    font-size: 155%;
+    margin-top: 8vh;
+    text-align: center;
+    margin-right: 15vh;
+}
+
+.start{
+    margin-top: 7vh;
+}
+
+.start a{
+    font-size: 150%;
+    margin-left: 7vh;
+    background-color: #F26655;
+    color: white;
+    padding: 15px 25px;
+    text-decoration: none;
+    border: #333;
+    border-style: double;
+    border-width: 10px;
+}
+
+.start a:hover{
+    background-color: #D46456;
+}
+
+.body{
+    background: linear-gradient(
+        to right,
+        pink 0%,
+        pink 50%,
+        blue 50%,
+        blue 100%
+    );
+    
 }
