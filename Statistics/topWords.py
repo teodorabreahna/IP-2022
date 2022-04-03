@@ -10,7 +10,8 @@ Counter = Counter(split_it)
   
 # most_common() produces k frequently encountered
 # input values and their respective counts.
-most_occur = Counter.most_common(5)
+k = int(input("k = "))
+most_occur = Counter.most_common(k)
   
 for i in most_occur:
     print ( i, end = " \n")
