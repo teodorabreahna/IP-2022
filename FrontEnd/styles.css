@@ -71,6 +71,17 @@ li a:hover {
    
 }
 
+.im-pr2-index2{
+    background-color: #56C6D4;
+    display: flex;
+}
+
+.im-pr2-index2 img{
+    height: 90vh;
+    position: relative;
+   
+}
+
 .mess1{
     color: #D46456;
     font-size: 245%;
@@ -107,12 +118,16 @@ li a:hover {
     padding: 15px 25px;
     text-decoration: none;
     border: #333;
-    border-style: double;
-    border-width: 10px;
+    border-style:groove;
+    border-width: 5px;
 }
 
 .start a:hover{
     background-color: #D46456;
+}
+
+.cerinta{
+    text-align:center;
 }
 
 .body{
