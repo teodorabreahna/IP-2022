@@ -23,6 +23,21 @@
             <artifactId>jumblr</artifactId>
             <version>0.0.13</version>
         </dependency>
+        <dependency>
+            <groupId>com.github.masecla22</groupId>
+            <artifactId>Reddit4J</artifactId>
+            <version>86324712f0</version>
+        </dependency>
+        <dependency>
+            <groupId>com.github.jreddit</groupId>
+            <artifactId>jreddit</artifactId>
+            <version>1.0.3</version>
+        </dependency>
     </dependencies>
-
+    <repositories>
+        <repository>
+            <id>jitpack.io</id>
+            <url>https://jitpack.io</url>
+        </repository>
+    </repositories>
 </project>
