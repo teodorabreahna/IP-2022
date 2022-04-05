@@ -21,6 +21,6 @@ public class Data_Processing
 	// Run the application.
 	void run ()
 	{		
-		System.out.println("Hello, World!");
+		Processor processor = new Processor(null);
 	}
 }
