@@ -54,6 +54,7 @@ li a:hover {
 .title h2{
     color: white;
     letter-spacing: 4px;
+    font-weight: 200;
 }
 
 /**/
@@ -71,7 +72,7 @@ li a:hover {
 
 .info-about h2{
     color: #FFFFFF;
-    font-size: 125%;
+    font-size: 120%;
     margin-top: 6.5rem;
     margin-left: 3.8rem;
     margin-right: 3.7rem;
@@ -87,10 +88,10 @@ li a:hover {
 
 .info-about h3{
     color: #FFFFFF;
-    font-size: 120%;
+    font-size: 113%;
     margin-top: 13rem;
     margin-left: 4rem;
-    margin-right: 4rem;
+    margin-right: 3.5rem;
     text-align: center;
     letter-spacing: 1px;
     border: 2px solid #32B5C5;
