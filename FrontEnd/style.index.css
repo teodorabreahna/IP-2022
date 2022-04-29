@@ -3,7 +3,7 @@
     padding: 0;
     box-sizing: border-box;
 }
-
+/*-------------------------------------------------------BARA DE NAVIGARE-----------------------------------------------------------*/
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -36,6 +36,9 @@ li a:hover {
     background-color: grey;
 }
 
+
+
+/*---------------ICONITA + TITLUL SITE-ULUI-------------*/
 .title{
     display: flex;
     justify-content: space-between;
@@ -51,16 +54,13 @@ li a:hover {
 .title h2{
     color: white;
     letter-spacing: 4px;
+    font-weight: 200;
 }
 
-.msg h3{
-    text-align: center;
-}
+/*-------------------------------------------------END BARA DE NAVIGARE---------------------------------------------------------*/
 
-.search-bars{
-    text-align: center;
-}
 
+/*--------------------- contine poza din stanga si scrisul din dreapta; e tot ce se vede cu exceptia navbarului-------------------*/
 .im-pr{
     background-color: #56C6D4;
     display: flex;
@@ -72,19 +72,7 @@ li a:hover {
     position: relative;
    
 }
-
-.im-pr2-index2{
-    background-color: #56C6D4;
-    display: flex;
-}
-
-.im-pr2-index2 img{
-    height: 90vh;
-    position: relative;
-    left: -100px;
-   
-}
-
+/*---------------------------------------------------------------MESAJELE---------------------------------------------------------*/
 .mess1{
     color: #D46456;
     font-size: 225%;
@@ -121,7 +109,7 @@ li a:hover {
     font-family: 'Montserrat', sans-serif;
     box-shadow: 5px 6px #888888;
 }
-
+/*--------------------------------------buton-ul de get started-------------------------------------------------*/
 .start{
     margin-top: 5rem;
 }
@@ -136,6 +124,7 @@ li a:hover {
     border:1px solid #333;
     border-style:groove;
     border-width: 4px;
+    border-radius: 8px;
     box-shadow: 1px 1px #333;
 }
 
@@ -143,38 +132,4 @@ li a:hover {
     background-color: #D46456;
 }
 
-.cerinta{
-    text-align:center;
-    margin-left: 15px;
-    margin-bottom: 50px;
-    margin-top: 50px;
-}
-
-.sb {
-    height: 100px;
-    width: 150 px;
-    font-size: 210%;
-    margin-bottom: 100px;
-    margin-left: 45px;
-}
-
-.search-bars{
-    align-items: center;
-    justify-content: space-between;
-}
-
-.cerinta{
-    color: #FFFFFF;
-    font-size: 160%;
-}
-
-.body{
-    background: linear-gradient(
-        to right,
-        pink 0%,
-        pink 50%,
-        blue 50%,
-        blue 100%
-    );
-    
-}
+/*---------------------------------------------------gata buton------------------------------------------------*/
