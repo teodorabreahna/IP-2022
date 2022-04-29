@@ -9,11 +9,11 @@
     justify-content: space-between;
     width: 80%;
     align-items: center;
-    background-color:  #333;
+    background-color:  #000000;
     height: 10vh;
-    font-size: 120%;
+    font-size: 135%;
     width: auto;
-    font-family: 'Palette Mosaic', cursive;
+    font-family: 'Montserrat', sans-serif;
     position: sticky;
 }
 
@@ -27,24 +27,26 @@ li a{
     display: block;
     padding: 14px 16px;
     color: white;
-    margin-right: 30px;
+    margin-right: 7rem;
     letter-spacing: 5px;
+    font-size: 117%;
 }
 
 li a:hover {
-    background-color: #111;
-  }
+    background-color: grey;
+}
 
-  .title{
-      display: flex;
-      justify-content: space-between;
-  }
+.title{
+    display: flex;
+    justify-content: space-between;
+    margin-left: 3rem;
+}
 
-  .title img{
-      width: 60px;
-      height: 50px;
-  }
-  
+.title img{
+    width: 60px;
+    height: 50px;
+}
+
 
 .title h2{
     color: white;
@@ -66,7 +68,7 @@ li a:hover {
 
 .im-pr img{
     height: 90vh;
-    left: -220px;
+    left: -30rem;
     position: relative;
    
 }
@@ -79,15 +81,19 @@ li a:hover {
 .im-pr2-index2 img{
     height: 90vh;
     position: relative;
+    left: -100px;
    
 }
 
 .mess1{
     color: #D46456;
-    font-size: 245%;
+    font-size: 225%;
     margin-top: 8vh;
     text-align: center;
     margin-right: 15vh;
+    margin-left: -20rem;
+    letter-spacing: 1px;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .mess2{
@@ -96,30 +102,41 @@ li a:hover {
     margin-top: 8vh;
     text-align: center;
     margin-right: 15vh;
+    margin-left: -19rem;
+    font-family: 'Montserrat', sans-serif;
 }
+
 
 .mess3{
     color: #FFFFFF;
-    font-size: 155%;
-    margin-top: 8vh;
+    font-size: 125%;
+    margin-top: 6.5rem;
     text-align: center;
     margin-right: 15vh;
+    margin-left: -20rem;
+    letter-spacing: 1px;
+    border: 2px solid #32B5C5;
+    background: #32B5C5;
+    border-radius: 14px;
+    font-family: 'Montserrat', sans-serif;
+    box-shadow: 5px 6px #888888;
 }
 
 .start{
-    margin-top: 7vh;
+    margin-top: 5rem;
 }
 
 .start a{
     font-size: 150%;
-    margin-left: 7vh;
+    margin-left: -8rem;
     background-color: #F26655;
     color: white;
     padding: 15px 25px;
     text-decoration: none;
-    border: #333;
+    border:1px solid #333;
     border-style:groove;
-    border-width: 5px;
+    border-width: 4px;
+    box-shadow: 1px 1px #333;
 }
 
 .start a:hover{
@@ -128,6 +145,27 @@ li a:hover {
 
 .cerinta{
     text-align:center;
+    margin-left: 15px;
+    margin-bottom: 50px;
+    margin-top: 50px;
+}
+
+.sb {
+    height: 100px;
+    width: 150 px;
+    font-size: 210%;
+    margin-bottom: 100px;
+    margin-left: 45px;
+}
+
+.search-bars{
+    align-items: center;
+    justify-content: space-between;
+}
+
+.cerinta{
+    color: #FFFFFF;
+    font-size: 160%;
 }
 
 .body{
