@@ -9,5 +9,6 @@ public class Main {
         Collect t = new Collect();
         JumblrClient client = c.newClient();
         //t.getTags(client,"gif"); - have to figure out why it throws the error
+        t.followBlog(client,"seejohnrun.tumblr.com");
     }
 }

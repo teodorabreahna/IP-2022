@@ -1,6 +1,7 @@
 package tumblrcollect;
 
 import com.tumblr.jumblr.JumblrClient;
+import com.tumblr.jumblr.types.Blog;
 import com.tumblr.jumblr.types.Post;
 
 public class Collect extends Connect {
@@ -8,5 +9,9 @@ public class Collect extends Connect {
         for(Post post : client.tagged(tag)){
             post.getId();
         }
+    }
+    public void followBlog(JumblrClient client, String blogname){
+        Blog blog = client.blogInfo(blogname);
+        blog.follow();
     }
 }
