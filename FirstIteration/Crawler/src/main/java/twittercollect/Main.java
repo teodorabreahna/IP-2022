@@ -19,22 +19,34 @@ public class Main {
         }
         Twitter twitter = new TwitterFactory().getInstance();
         try {
-            Query query = new Query(args[0]);
-            QueryResult result;
-            int k=0;
-            do {
-                result = twitter.search(query);
-                List<Status> tweets = result.getTweets();
-                for (Status tweet : tweets) {
-                    obj.put("user", tweet.getUser().getScreenName());
-                    obj.put("tweets", tweet.getText());
-                    writer.write(obj.toString());
-                        System.out.println("Successfully Copied JSON Object to File...");
-                        System.out.println("\nJSON Object: " + obj);
-                    writer.write("\n");
-                }
+            ArrayList<Query> queries = new ArrayList<>();
+            ArrayList<QueryResult> queryResults = new ArrayList<QueryResult>(args.length);
+            for (String arg : args) {
+                queries.add(new Query(arg));
+            }
+            for(int i=0;i<queries.size();i++) {
+                int k=0;
+                System.out.println(queries.get(i));
 
-            } while ((query = result.nextQuery()) != null );
+                do {
+                    queryResults.add(twitter.search(queries.get(i)));
+                    List<Status> tweets =  queryResults.get(i).getTweets();
+                    for (Status tweet : tweets) {
+                        if(tweet.getLang().equalsIgnoreCase("en")) {
+                            if (!tweet.getText().contains("RT")) {
+                                obj.put("topic", args[i]);
+                                obj.put("user", tweet.getUser().getScreenName());
+                                obj.put("tweets", tweet.getText());
+                                writer.write(obj.toString());
+                                System.out.println("Successfully Copied JSON Object to File...");
+                                System.out.println("\nJSON Object: " + obj);
+                                writer.write("\n");
+                            }
+                        }
+                    }
+                    k++;
+                } while ((queries.set(i,queryResults.get(i).nextQuery()))!= null && k<2);
+            }
             writer.close();
             System.exit(0);
         } catch (TwitterException te) {
