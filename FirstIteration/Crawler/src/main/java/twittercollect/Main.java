@@ -21,20 +21,26 @@ public class Main {
         try {
             Query query = new Query(args[0]);
             QueryResult result;
-            int k=0;
+            int tweet_count=0;
             do {
                 result = twitter.search(query);
                 List<Status> tweets = result.getTweets();
                 for (Status tweet : tweets) {
-                    obj.put("user", tweet.getUser().getScreenName());
-                    obj.put("tweets", tweet.getText());
-                    writer.write(obj.toString());
-                        System.out.println("Successfully Copied JSON Object to File...");
-                        System.out.println("\nJSON Object: " + obj);
-                    writer.write("\n");
-                }
+                        if(tweet.getLang().equalsIgnoreCase("en")) {
+                            if(!tweet.getText().contains("RT")) {
+                                obj.put("user", tweet.getUser().getScreenName());
+                                obj.put("tweet", tweet.getText());
+                                obj.put("tweet_id",tweet.getId());
 
-            } while ((query = result.nextQuery()) != null );
+                                writer.write(obj.toString());
+                                System.out.println("Successfully Copied JSON Object to file...");
+                                System.out.println("\nJSON Object: " + obj);
+                                writer.write("\n");
+                            }
+                        }
+                }
+            tweet_count++;
+            } while ((query = result.nextQuery()) != null && tweet_count<3);
             writer.close();
             System.exit(0);
         } catch (TwitterException te) {
