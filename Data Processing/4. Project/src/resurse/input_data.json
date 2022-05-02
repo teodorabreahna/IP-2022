@@ -1,17 +1,37 @@
 {"Concept": {
    "women": {
-       "Adjectives": "emotional",
-       "Nouns": "lady",
-       "Verbs": "",
-       "Pronouns": "her",
-       "Adverbs": "adorable" 
+       "Adjectives":[
+           {"value": "emotional"}
+       ],
+       "Nouns":[
+        {"value": "lady"}
+       ],
+       "Verbs":[
+        {"value": ""}
+       ],
+       "Pronouns":[
+        {"value": "hers"}
+       ],
+       "Adverbs":[
+        {"value": "adorable"}
+       ]
    },
-   "men": { 
-       "Adjectives": "adventurous",
-       "Nouns": "hero",
-       "Verbs": "",
-       "Pronouns": "his",
-       "Adverbs": "gentleman"
-   }
+   "men": {
+    "Adjectives":[
+        {"value": "adventurous"}
+    ],
+    "Nouns":[
+     {"value": "hero"}
+    ],
+    "Verbs":[
+     {"value": ""}
+    ],
+    "Pronouns":[
+     {"value": "his"}
+    ],
+    "Adverbs":[
+     {"value": "gentleman"}
+    ]
+}
    }
 }  
