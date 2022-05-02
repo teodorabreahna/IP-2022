@@ -13,7 +13,7 @@ public class GetInput {
         JSONParser jsonParser = new JSONParser();
         try {
             //Parsing the contents of the JSON file
-            JSONObject jsonObject = (JSONObject) jsonParser.parse(new FileReader("E:/Facultate/An II/Sem 2/IngineriaProgramarii/IP-2022/Data Processing/4. Project/sample.json"));
+            JSONObject jsonObject = (JSONObject) jsonParser.parse(new FileReader("./sample.json"));
             String id = (String) jsonObject.get("ID");
             String first_name = (String) jsonObject.get("First_Name");
             String last_name = (String) jsonObject.get("Last_Name");
