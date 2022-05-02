@@ -1,0 +1,17 @@
+{"Concept": {
+   "women": {
+       "Adjectives": "emotional",
+       "Nouns": "lady",
+       "Verbs": "",
+       "Pronouns": "her",
+       "Adverbs": "adorable" 
+   },
+   "men": { 
+       "Adjectives": "adventurous",
+       "Nouns": "hero",
+       "Verbs": "",
+       "Pronouns": "his",
+       "Adverbs": "gentleman"
+   }
+   }
+}  

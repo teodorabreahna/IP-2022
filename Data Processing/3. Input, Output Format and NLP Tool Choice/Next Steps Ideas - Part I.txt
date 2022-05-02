@@ -1,0 +1,3 @@
+Ideas:
+- Think about what kind of file we should give to the Statistics Team (json)
+- Start the testing part 

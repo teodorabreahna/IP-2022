@@ -1,0 +1,6 @@
+MonkeyLearn can’t to install. You need to do it online. Just make account and enjoying doing that online for free. 
+There are 3 rules how MonkeyLearn works, read that:
+
+1.	Connect your text data. You can upload CSV/Excel files or connect with your apps via direct integrations, Zapier or API. ...
+2.	Turn your text into tags. Use text analysis models to tag your text automatically. ...
+3.	Put your tags to work.

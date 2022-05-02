@@ -5,6 +5,7 @@
 package Data_Processing;
 
 
+import static Data_Processing.GetInput.readingJson;
 
 public class Data_Processing
 {
@@ -15,6 +16,7 @@ public class Data_Processing
 		
 		// Run the application.
 		data_processing.run();
+		readingJson();
 	}
 	
 	
