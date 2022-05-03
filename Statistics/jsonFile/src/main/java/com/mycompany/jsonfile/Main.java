@@ -3,19 +3,38 @@ package com.mycompany.jsonfile;
 
 /**
  *
- * @author Florin and Andrei
+ * @author Florin, Andrei, Alisa
  *
  */
-import java.io.File;
+
 import java.io.IOException;
-import com.fasterxml.jackson.databind.ObjectMapper;
-import java.io.File;
-import java.util.*;
+import java.util.LinkedHashMap;
+import java.util.List;
 
 public class Main {
+
+    /**
+     * Funtia primeste ca parametru un array de cuvinte pentru care calculeaza frecventa aparitiilor.
+     * @param arr un array de string-uri
+     * @return un HashMap cu fiecare cuvant si frecventa lui
+     */
+    static LinkedHashMap<String, Integer> frequency(String[] arr) {
+
+        LinkedHashMap<String, Integer> hs = new LinkedHashMap<String, Integer>();
+        for (int i = 0; i < arr.length; i++)
+        {
+            if (hs.containsKey(arr[i])) {
+                hs.put(arr[i], hs.get(arr[i]) + 1);
+            } else {
+                hs.put(arr[i], 1);
+            }
+        }
+        return hs;
+    }
+
     public static void main(String[] args){
 
-        LinkedHashMap<String, Integer> hm = new LinkedHashMap<String, Integer>();
+        /*LinkedHashMap<String, Integer> hm = new LinkedHashMap<String, Integer>();
         hm.put("reading", 15);
         hm.put("working", 11);
         hm.put("playing", 14);
@@ -29,13 +48,23 @@ public class Main {
         hm1.put("reading", 9);
         hm1.put("running", 24);
         hm1.put("playing", 7);
-        hm1.put("swimming", 6);
+        hm1.put("swimming", 6);*/
+
+        String arr[] = { "dog", "dog", "dog", "dog", "man", "man", "man", "woman"};
+        LinkedHashMap<String, Integer> hm = frequency(arr);
+
+        String arr2[] = { "woman", "woman", "woman", "woman", "rain", "rain", "sun", "man"};
+        LinkedHashMap<String, Integer> hm1 = frequency(arr2);
 
         ConceptExtension concept1=new ConceptExtension("primul", hm);
         ConceptExtension concept2=new ConceptExtension("alDoilea", hm1);
 
         concept1.HashMapSort();
         concept2.HashMapSort();
+
+        System.out.println(concept1.getTopWords());
+        System.out.println(concept2.getTopWords());
+        System.out.println();
 
         List<String> similarities=concept1.similarities(concept2);
         System.out.println(similarities);

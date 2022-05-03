@@ -3,6 +3,7 @@ package com.mycompany.jsonfile;
 import java.util.*;
 
 import static java.util.stream.Collectors.*;
+
 public class ConceptExtension {
     private String concept;
     private LinkedHashMap<String,Integer> topWords;
