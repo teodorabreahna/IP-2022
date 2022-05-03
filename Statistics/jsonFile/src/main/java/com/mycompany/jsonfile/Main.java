@@ -74,10 +74,10 @@ public class Main {
         System.out.println();
         List<String> diff2=concept2.differences(concept1);
         System.out.println(diff2);
-
     
-        Concept c1 = new Concept(concept1.getConcept(),"descriere concept1");
-        Concept c2 = new Concept(concept2.getConcept(),"descriere concept2");
+        Concept c1 = new Concept(concept1.getConcept(),"descriere concept1", concept1.setRelevant());
+        Concept c2 = new Concept(concept2.getConcept(),"descriere concept2", concept2.setRelevant());
+       
         /*List<String> l1 = new ArrayList<>();
         l1.add("cuvant a");
         l1.add("cuvant b");
