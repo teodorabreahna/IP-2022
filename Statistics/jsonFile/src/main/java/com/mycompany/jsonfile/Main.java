@@ -50,7 +50,7 @@ public class Main {
         hm1.put("playing", 7);
         hm1.put("swimming", 6);*/
 
-        String arr[] = { "dog", "dog", "dog", "dog", "man", "man", "man", "woman"};
+        String arr[] = { "dog", "dog", "dog", "dog", "man", "man", "man", "woman", "hello"};
         LinkedHashMap<String, Integer> hm = frequency(arr);
 
         String arr2[] = { "woman", "woman", "woman", "woman", "rain", "rain", "sun", "man"};
@@ -76,8 +76,8 @@ public class Main {
         System.out.println(diff2);
 
     
-        Concept c1 = new Concept(concept1.getConcept(),"descriere concept1");
-        Concept c2 = new Concept(concept2.getConcept(),"descriere concept2");
+        Concept c1 = new Concept(concept1.getConcept(),"descriere concept1", concept1.setRelevant());
+        Concept c2 = new Concept(concept2.getConcept(),"descriere concept2", concept2.setRelevant());
         /*List<String> l1 = new ArrayList<>();
         l1.add("cuvant a");
         l1.add("cuvant b");

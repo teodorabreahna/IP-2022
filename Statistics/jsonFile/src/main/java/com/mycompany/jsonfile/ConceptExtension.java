@@ -7,6 +7,7 @@ import static java.util.stream.Collectors.*;
 public class ConceptExtension {
     private String concept;
     private LinkedHashMap<String,Integer> topWords;
+    private String relevant;
 
     public ConceptExtension(String concept, LinkedHashMap<String, Integer> topWords) {
         this.concept = concept;
@@ -37,6 +38,33 @@ public class ConceptExtension {
                 .stream()
                 .sorted(Collections.reverseOrder(Map.Entry.comparingByValue()))
                 .collect(toMap(Map.Entry::getKey, Map.Entry::getValue, (e1, e2) -> e2, LinkedHashMap::new));
+    }
+
+    public String setRelevant(){
+        int contor=0;
+        /*
+        StringBuilder sb1 = new StringBuilder("chart?bkg=white&c={ type: 'bar', data: { labels: [");
+        StringBuilder sb2 = new StringBuilder();
+         */
+        relevant = new String();
+        String s = new String();
+        relevant = relevant +"chart?bkg=white&c={ type: 'bar', data: { labels: [";
+        while (contor<=4){
+            for(Map.Entry<String,Integer> entry: topWords.entrySet()){
+                if(contor<=3){
+                    relevant = relevant +"'"+entry.getKey()+"', ";
+                    s=s+entry.getValue()+", ";
+                }
+                else if(contor==4){
+                    relevant= relevant+"'"+entry.getKey()+"'";
+                    s=s+entry.getValue();
+                }
+                contor++;
+            }
+        }
+
+        relevant=relevant+"], datasets: [{ label: 'Users', data: ["+s+"] }] }}";
+        return relevant;
     }
 
     public List<String> similarities(ConceptExtension concept2){
