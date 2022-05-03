@@ -4,11 +4,12 @@ package com.mycompany.jsonfile;
 public class Concept {
     private String cuvant;
     private String descriere;
+    private String chart;
 
     public Concept(String cuvant, String descriere) {
         this.cuvant = cuvant;
-
         this.descriere = descriere;
+        this.chart = relevant;
     }
 
     public String getCuvant() {
@@ -19,5 +20,6 @@ public class Concept {
         return descriere;
     }
     
+    public String getChart() { return chart; }
     
 }
