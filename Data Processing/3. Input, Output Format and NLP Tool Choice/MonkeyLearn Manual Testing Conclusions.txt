@@ -1,0 +1,75 @@
+Iasi is the most important political, economic and cultural centre of the province of 
+Moldavia as well as one of the oldest cities in Romania. 
+Located in the northeastern part of the country, Iasi was for many centuries the crossing 
+point of the most important commercial routes linking Poland, Hungary, Russia and Constantinople.
+
+
+HTTP/1.1 200 success
+content-length: 581
+content-type: application/json
+x-query-limit-limit: 1000
+x-query-limit-remaining: 984
+x-query-limit-request-queries: 1
+[
+  {
+    "text": "Iasi is the most important political, economic and cultural centre of the province of \nMoldavia as well as one of the oldest cities in Romania. \nLocated in the northeastern part of the country, Iasi was for many centuries the crossing \npoint of the most important commercial routes linking Poland, Hungary, Russia and Constantinople.\n",
+    "external_id": null,
+    "error": false,
+    "classifications": [
+      {
+        "tag_name": "taggs",
+        "tag_id": 124117983,
+        "confidence": 1
+      },
+      {
+        "tag_name": "emotions",
+        "tag_id": 124117984,
+        "confidence": 0.834
+      },
+      {
+        "tag_name": "text",
+        "tag_id": 124117985,
+        "confidence": 0.834
+      }
+    ]
+  }
+]
+
+
+Iasi is the najpoznatija important polity, economic and cultural centre of the province of 
+Moldavia as well as one of the oldest cities in Romania. 
+Lociran je in the northeastern part of the country, Iasi had for many centuries the crossing 
+point of the mnogoimportant commercial routes linking Poland, Hungary, Russia and Constantinople.
+
+
+HTTP/1.1 200 success
+content-length: 589
+content-type: application/json
+x-query-limit-limit: 1000
+x-query-limit-remaining: 983
+x-query-limit-request-queries: 1
+[
+  {
+    "text": "Iasi is the najpoznatija important polity, economic and cultural centre of the province of \nMoldavia as well as one of the oldest cities in Romania. \nLociran je in the northeastern part of the country, Iasi had for many centuries the crossing \npoint of the mnogoimportant commercial routes linking Poland, Hungary, Russia and Constantinople.\n",
+    "external_id": null,
+    "error": false,
+    "classifications": [
+      {
+        "tag_name": "taggs",
+        "tag_id": 124117983,
+        "confidence": 1
+      },
+      {
+        "tag_name": "emotions",
+        "tag_id": 124117984,
+        "confidence": 0.828
+      },
+      {
+        "tag_name": "text",
+        "tag_id": 124117985,
+        "confidence": 0.828
+      }
+    ]
+  }
+]
+
