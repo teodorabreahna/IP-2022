@@ -39,6 +39,28 @@ public class ConceptExtension {
                 .collect(toMap(Map.Entry::getKey, Map.Entry::getValue, (e1, e2) -> e2, LinkedHashMap::new));
     }
 
+    public String setRelevant(){
+        int contor=0;
+        relevant = new String();
+        String s = new String();
+        relevant = relevant +"chart?bkg=white&c={ type: 'bar', data: { labels: [";
+        while (contor<=4){
+            for(Map.Entry<String,Integer> entry: topWords.entrySet()){
+                if(contor<=3){
+                    relevant = relevant +"'"+entry.getKey()+"', ";
+                    s=s+entry.getValue()+", ";
+                }
+                else if(contor==4){
+                    relevant= relevant+"'"+entry.getKey()+"'";
+                    s=s+entry.getValue();
+                }
+                contor++;
+            }
+        }
+        relevant=relevant+"], datasets: [{ label: 'Users', data: ["+s+"] }] }}";
+        return relevant;
+    }
+    
     public List<String> similarities(ConceptExtension concept2){
         Map<String, Integer> topWords1 =topWords;
         Map<String, Integer> topWords2 =concept2.getTopWords();
@@ -79,4 +101,5 @@ public class ConceptExtension {
         }
         return diff;
     }
+    
 }
