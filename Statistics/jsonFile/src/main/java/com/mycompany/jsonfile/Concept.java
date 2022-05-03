@@ -1,8 +1,6 @@
 
 package com.mycompany.jsonfile;
 
-import java.util.ArrayList;
-import java.util.List;
 public class Concept {
     private String cuvant;
     private String descriere;

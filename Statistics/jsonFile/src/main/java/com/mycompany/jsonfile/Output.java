@@ -3,6 +3,7 @@ package com.mycompany.jsonfile;
 
 import java.util.ArrayList;
 import java.util.List;
+
 public class Output {
     
     private Concept concept1;
