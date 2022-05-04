@@ -1,11 +1,10 @@
 import axios from 'axios';
 
+//E FOLOSIT PENTRU DATA PROCESSING SI STATISTICS<,
 
+class DataProcessingService {
+    callApi(jsonData, moduleURL) {
 
-class CrawlerService {
-    callApi(conceptOne, conceptTwo, moduleURL) {
-        var axios = require('axios');
-        var data = { "concept1": conceptOne, "concept2": conceptTwo, };
 
         var config = {
             method: 'post',
@@ -13,7 +12,7 @@ class CrawlerService {
             headers: {
                 'Content-Type': 'application/json'
             },
-            data: data
+            data: jsonData
         };
 
         return axios(config);
@@ -21,4 +20,4 @@ class CrawlerService {
 
 }
 
-export default new CrawlerService();
+export default new DataProcessingService();
