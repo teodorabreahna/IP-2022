@@ -1,37 +1,302 @@
-{"Concept": {
-   "women": {
-       "Adjectives":[
-           {"value": "emotional"}
-       ],
-       "Nouns":[
-        {"value": "lady"}
-       ],
-       "Verbs":[
-        {"value": ""}
-       ],
-       "Pronouns":[
-        {"value": "hers"}
-       ],
-       "Adverbs":[
-        {"value": "adorable"}
-       ]
-   },
-   "men": {
-    "Adjectives":[
-        {"value": "adventurous"}
-    ],
-    "Nouns":[
-     {"value": "hero"}
-    ],
-    "Verbs":[
-     {"value": ""}
-    ],
-    "Pronouns":[
-     {"value": "his"}
-    ],
-    "Adverbs":[
-     {"value": "gentleman"}
-    ]
-}
-   }
-}  
+[
+  {
+    "topic": "man",
+    "tweet": "@krisc0705 @walshthegr8 @bgard_21 @BigKep13 Not even comparable man. Ones a choice. The other is not.",
+    "user": "BrandenWoody"
+  },
+  {
+    "topic": "man",
+    "tweet": "@LiaoNft Hey man, you should reach out to @Anonhackerr1 for your account recovery. Hope this helps.",
+    "user": "woodjoy706"
+  },
+  {
+    "topic": "man",
+    "tweet": "Trying to out outrage others only gets you in trouble. Sometimes keep it simple man. Meat and potatoes tweet to convey your feelings never let anyone down",
+    "user": "MM_QC21"
+  },
+  {
+    "topic": "man",
+    "tweet": "@Elmerom08481960 @gingiedummi @kennybeats Don't lie to yourself or other dudes like this man, you look beyond the normal scope of ignorance and veer dangerously close into \"Should be put in the shame corner\"",
+    "user": "JettMaeda"
+  },
+  {
+    "topic": "man",
+    "tweet": "A wise man once said : https://t.co/FeZpxLAucH",
+    "user": "MELNagdy2003"
+  },
+  {
+    "topic": "man",
+    "tweet": "@krisc0705 @walshthegr8 @bgard_21 @BigKep13 Not even comparable man. Ones a choice. The other is not.",
+    "user": "BrandenWoody"
+  },
+  {
+    "topic": "man",
+    "tweet": "@LiaoNft Hey man, you should reach out to @Anonhackerr1 for your account recovery. Hope this helps.",
+    "user": "woodjoy706"
+  },
+  {
+    "topic": "man",
+    "tweet": "Trying to out outrage others only gets you in trouble. Sometimes keep it simple man. Meat and potatoes tweet to convey your feelings never let anyone down",
+    "user": "MM_QC21"
+  },
+  {
+    "topic": "man",
+    "tweet": "@Elmerom08481960 @gingiedummi @kennybeats Don't lie to yourself or other dudes like this man, you look beyond the normal scope of ignorance and veer dangerously close into \"Should be put in the shame corner\"",
+    "user": "JettMaeda"
+  },
+  {
+    "topic": "man",
+    "tweet": "A wise man once said : https://t.co/FeZpxLAucH",
+    "user": "MELNagdy2003"
+  },
+  {
+    "topic": "man",
+    "tweet": "@krisc0705 @walshthegr8 @bgard_21 @BigKep13 Not even comparable man. Ones a choice. The other is not.",
+    "user": "BrandenWoody"
+  },
+  {
+    "topic": "man",
+    "tweet": "@LiaoNft Hey man, you should reach out to @Anonhackerr1 for your account recovery. Hope this helps.",
+    "user": "woodjoy706"
+  },
+  {
+    "topic": "man",
+    "tweet": "Trying to out outrage others only gets you in trouble. Sometimes keep it simple man. Meat and potatoes tweet to convey your feelings never let anyone down",
+    "user": "MM_QC21"
+  },
+  {
+    "topic": "man",
+    "tweet": "@Elmerom08481960 @gingiedummi @kennybeats Don't lie to yourself or other dudes like this man, you look beyond the normal scope of ignorance and veer dangerously close into \"Should be put in the shame corner\"",
+    "user": "JettMaeda"
+  },
+  {
+    "topic": "man",
+    "tweet": "A wise man once said : https://t.co/FeZpxLAucH",
+    "user": "MELNagdy2003"
+  },
+  {
+    "topic": "man",
+    "tweet": "@krisc0705 @walshthegr8 @bgard_21 @BigKep13 Not even comparable man. Ones a choice. The other is not.",
+    "user": "BrandenWoody"
+  },
+  {
+    "topic": "man",
+    "tweet": "@LiaoNft Hey man, you should reach out to @Anonhackerr1 for your account recovery. Hope this helps.",
+    "user": "woodjoy706"
+  },
+  {
+    "topic": "man",
+    "tweet": "Trying to out outrage others only gets you in trouble. Sometimes keep it simple man. Meat and potatoes tweet to convey your feelings never let anyone down",
+    "user": "MM_QC21"
+  },
+  {
+    "topic": "man",
+    "tweet": "@Elmerom08481960 @gingiedummi @kennybeats Don't lie to yourself or other dudes like this man, you look beyond the normal scope of ignorance and veer dangerously close into \"Should be put in the shame corner\"",
+    "user": "JettMaeda"
+  },
+  {
+    "topic": "man",
+    "tweet": "A wise man once said : https://t.co/FeZpxLAucH",
+    "user": "MELNagdy2003"
+  },
+  {
+    "topic": "man",
+    "tweet": "@krisc0705 @walshthegr8 @bgard_21 @BigKep13 Not even comparable man. Ones a choice. The other is not.",
+    "user": "BrandenWoody"
+  },
+  {
+    "topic": "man",
+    "tweet": "@LiaoNft Hey man, you should reach out to @Anonhackerr1 for your account recovery. Hope this helps.",
+    "user": "woodjoy706"
+  },
+  {
+    "topic": "man",
+    "tweet": "Trying to out outrage others only gets you in trouble. Sometimes keep it simple man. Meat and potatoes tweet to convey your feelings never let anyone down",
+    "user": "MM_QC21"
+  },
+  {
+    "topic": "man",
+    "tweet": "@Elmerom08481960 @gingiedummi @kennybeats Don't lie to yourself or other dudes like this man, you look beyond the normal scope of ignorance and veer dangerously close into \"Should be put in the shame corner\"",
+    "user": "JettMaeda"
+  },
+  {
+    "topic": "man",
+    "tweet": "A wise man once said : https://t.co/FeZpxLAucH",
+    "user": "MELNagdy2003"
+  },
+  {
+    "topic": "woman",
+    "tweet": "Dude I’ve been taking to haven’t posted on IG in a year + and have been in hiding when I tell you this man is gorgeous he’s fucking GORGEOUS 🔥",
+    "user": "Labebita44"
+  },
+  {
+    "topic": "woman",
+    "tweet": "Going live as we continue our journey through the Mega Man X series! x2 and probably x3 today!\n\n#Vtuber #VTuberEN #SupportSmallStreamers \n\nhttps://t.co/V3ZlSG9Uuj 💙🦈🎤 https://t.co/a7AdXh1Akt",
+    "user": "RayneyShark"
+  },
+  {
+    "topic": "woman",
+    "tweet": "Genesis 7:21 And all flesh died that moved upon the earth, both of fowl, and of cattle, and of beast, and of every creeping thing that creepeth upon the earth, and every man:",
+    "user": "EquusDomini"
+  },
+  {
+    "topic": "woman",
+    "tweet": "I thought this man was in jail. https://t.co/TSQJgnuoaq",
+    "user": "DrSue19380"
+  },
+  {
+    "topic": "woman",
+    "tweet": "Man City ain’t ready for a Ucl night at the Bernabeu",
+    "user": "amitttrmfc"
+  },
+  {
+    "topic": "woman",
+    "tweet": "@camizzlexo I’m a changed MAN.",
+    "user": "Adolfo_Ramon59"
+  },
+  {
+    "topic": "woman",
+    "tweet": "@Tynezphoto Ty love you man 🙏🏻🙏🏻",
+    "user": "johnnyhomemovie"
+  },
+  {
+    "topic": "woman",
+    "tweet": "Dude I’ve been taking to haven’t posted on IG in a year + and have been in hiding when I tell you this man is gorgeous he’s fucking GORGEOUS 🔥",
+    "user": "Labebita44"
+  },
+  {
+    "topic": "woman",
+    "tweet": "Going live as we continue our journey through the Mega Man X series! x2 and probably x3 today!\n\n#Vtuber #VTuberEN #SupportSmallStreamers \n\nhttps://t.co/V3ZlSG9Uuj 💙🦈🎤 https://t.co/a7AdXh1Akt",
+    "user": "RayneyShark"
+  },
+  {
+    "topic": "woman",
+    "tweet": "Genesis 7:21 And all flesh died that moved upon the earth, both of fowl, and of cattle, and of beast, and of every creeping thing that creepeth upon the earth, and every man:",
+    "user": "EquusDomini"
+  },
+  {
+    "topic": "woman",
+    "tweet": "I thought this man was in jail. https://t.co/TSQJgnuoaq",
+    "user": "DrSue19380"
+  },
+  {
+    "topic": "woman",
+    "tweet": "Man City ain’t ready for a Ucl night at the Bernabeu",
+    "user": "amitttrmfc"
+  },
+  {
+    "topic": "woman",
+    "tweet": "@camizzlexo I’m a changed MAN.",
+    "user": "Adolfo_Ramon59"
+  },
+  {
+    "topic": "woman",
+    "tweet": "@Tynezphoto Ty love you man 🙏🏻🙏🏻",
+    "user": "johnnyhomemovie"
+  },
+  {
+    "topic": "woman",
+    "tweet": "Dude I’ve been taking to haven’t posted on IG in a year + and have been in hiding when I tell you this man is gorgeous he’s fucking GORGEOUS 🔥",
+    "user": "Labebita44"
+  },
+  {
+    "topic": "woman",
+    "tweet": "Going live as we continue our journey through the Mega Man X series! x2 and probably x3 today!\n\n#Vtuber #VTuberEN #SupportSmallStreamers \n\nhttps://t.co/V3ZlSG9Uuj 💙🦈🎤 https://t.co/a7AdXh1Akt",
+    "user": "RayneyShark"
+  },
+  {
+    "topic": "woman",
+    "tweet": "Genesis 7:21 And all flesh died that moved upon the earth, both of fowl, and of cattle, and of beast, and of every creeping thing that creepeth upon the earth, and every man:",
+    "user": "EquusDomini"
+  },
+  {
+    "topic": "woman",
+    "tweet": "I thought this man was in jail. https://t.co/TSQJgnuoaq",
+    "user": "DrSue19380"
+  },
+  {
+    "topic": "woman",
+    "tweet": "Man City ain’t ready for a Ucl night at the Bernabeu",
+    "user": "amitttrmfc"
+  },
+  {
+    "topic": "woman",
+    "tweet": "@camizzlexo I’m a changed MAN.",
+    "user": "Adolfo_Ramon59"
+  },
+  {
+    "topic": "woman",
+    "tweet": "@Tynezphoto Ty love you man 🙏🏻🙏🏻",
+    "user": "johnnyhomemovie"
+  },
+  {
+    "topic": "woman",
+    "tweet": "Dude I’ve been taking to haven’t posted on IG in a year + and have been in hiding when I tell you this man is gorgeous he’s fucking GORGEOUS 🔥",
+    "user": "Labebita44"
+  },
+  {
+    "topic": "woman",
+    "tweet": "Going live as we continue our journey through the Mega Man X series! x2 and probably x3 today!\n\n#Vtuber #VTuberEN #SupportSmallStreamers \n\nhttps://t.co/V3ZlSG9Uuj 💙🦈🎤 https://t.co/a7AdXh1Akt",
+    "user": "RayneyShark"
+  },
+  {
+    "topic": "woman",
+    "tweet": "Genesis 7:21 And all flesh died that moved upon the earth, both of fowl, and of cattle, and of beast, and of every creeping thing that creepeth upon the earth, and every man:",
+    "user": "EquusDomini"
+  },
+  {
+    "topic": "woman",
+    "tweet": "I thought this man was in jail. https://t.co/TSQJgnuoaq",
+    "user": "DrSue19380"
+  },
+  {
+    "topic": "woman",
+    "tweet": "Man City ain’t ready for a Ucl night at the Bernabeu",
+    "user": "amitttrmfc"
+  },
+  {
+    "topic": "woman",
+    "tweet": "@camizzlexo I’m a changed MAN.",
+    "user": "Adolfo_Ramon59"
+  },
+  {
+    "topic": "woman",
+    "tweet": "@Tynezphoto Ty love you man 🙏🏻🙏🏻",
+    "user": "johnnyhomemovie"
+  },
+  {
+    "topic": "woman",
+    "tweet": "Dude I’ve been taking to haven’t posted on IG in a year + and have been in hiding when I tell you this man is gorgeous he’s fucking GORGEOUS 🔥",
+    "user": "Labebita44"
+  },
+  {
+    "topic": "woman",
+    "tweet": "Going live as we continue our journey through the Mega Man X series! x2 and probably x3 today!\n\n#Vtuber #VTuberEN #SupportSmallStreamers \n\nhttps://t.co/V3ZlSG9Uuj 💙🦈🎤 https://t.co/a7AdXh1Akt",
+    "user": "RayneyShark"
+  },
+  {
+    "topic": "woman",
+    "tweet": "Genesis 7:21 And all flesh died that moved upon the earth, both of fowl, and of cattle, and of beast, and of every creeping thing that creepeth upon the earth, and every man:",
+    "user": "EquusDomini"
+  },
+  {
+    "topic": "woman",
+    "tweet": "I thought this man was in jail. https://t.co/TSQJgnuoaq",
+    "user": "DrSue19380"
+  },
+  {
+    "topic": "woman",
+    "tweet": "Man City ain’t ready for a Ucl night at the Bernabeu",
+    "user": "amitttrmfc"
+  },
+  {
+    "topic": "woman",
+    "tweet": "@camizzlexo I’m a changed MAN.",
+    "user": "Adolfo_Ramon59"
+  },
+  {
+    "topic": "woman",
+    "tweet": "@Tynezphoto Ty love you man 🙏🏻🙏🏻",
+    "user": "johnnyhomemovie"
+  }
+]
