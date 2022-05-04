@@ -2,12 +2,12 @@ package twittercollect;
 
 public class TweetObj {
     private String user;
-    private String tweet;
+    private String text;
     private String topic;
 
-    public TweetObj(String user, String tweet, String topic) {
+    public TweetObj(String user, String text, String topic) {
         this.user = user;
-        this.tweet = tweet;
+        this.text = text;
         this.topic = topic;
     }
 
@@ -19,12 +19,12 @@ public class TweetObj {
         this.user = user;
     }
 
-    public String getTweet() {
-        return tweet;
+    public String getText() {
+        return text;
     }
 
-    public void setTweet(String tweet) {
-        this.tweet = tweet;
+    public void setText(String text) {
+        this.text = text;
     }
 
     public String getTopic() {
