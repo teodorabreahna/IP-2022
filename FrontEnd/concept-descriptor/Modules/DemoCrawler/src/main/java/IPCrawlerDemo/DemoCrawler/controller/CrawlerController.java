@@ -1,6 +1,10 @@
 package IPCrawlerDemo.DemoCrawler.controller;
 
 
+import IPCrawlerDemo.DemoCrawler.Services.CrawlerService;
+import IPCrawlerDemo.DemoCrawler.models.CrawlerInputObject;
+import IPCrawlerDemo.DemoCrawler.models.CrawlerOutputObject;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 
@@ -8,19 +12,15 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 public class CrawlerController {
 
-    @GetMapping("/crawl")
+    CrawlerService crawlerService = new CrawlerService();
+
+    @PostMapping("/crawl")
     @ResponseBody
-    public String execute(@RequestParam String concept, @RequestParam String concept2)
+    public CrawlerOutputObject execute(@RequestBody CrawlerInputObject crawlerInputObject)
     {
         // http://localhost:8090/crawl?concept=hello&concept2=world
-        return "json:{etcc}";
-    }
 
-
-    @GetMapping("/")
-    public String e()
-    {
-        return "THIS IS FROM JAVA DEFAULT";
+        return crawlerService.processInfo(crawlerInputObject);
     }
 
 }
