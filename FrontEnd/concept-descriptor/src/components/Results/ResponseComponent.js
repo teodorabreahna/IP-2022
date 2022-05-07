@@ -2,12 +2,15 @@ import React from 'react';
 import CrawlerService from '../../services/CrawlerService';
 // import DataProcessingService from '../../services/DataProcessingService'
 // import StatisticsService from '../../services/StatisticsService';
+import ResultObject from './ResultObject';
+import ComponentCaller from '../../services/ComponentCaller'
 
 const CRAWLER_REST_API_URL = 'http://localhost:8090/crawl';
-//const DATAPROCESSING_REST_API_URL = '';
-//const STATISTICS_REST_API_URL = '';
+const DATA_PROCESSING_REST_API_URL = 'http://localhost:8090/crawl';
+const STATISTICS_REST_API_URL = 'http://localhost:8090/crawl';
 
 class ResponseComponent extends React.Component {
+    
 
     constructor(props) {
         super(props);
@@ -16,38 +19,43 @@ class ResponseComponent extends React.Component {
         }
     }
 
-    componentDidMount() {
+   async componentDidMount() {
 
         var intermediateData;
-        //fiecare serviciu un callback la celalalt momentan
-        CrawlerService.callApi(this.props.firstConcept, this.props.secondConcept, CRAWLER_REST_API_URL)
-            .then((crawlerResponse) => {
-                console.log("CRAWLER RESPONSE", crawlerResponse.data);
-                intermediateData = crawlerResponse.data;
-            })
-            // .then(
-            //     DataProcessingService.callApi(intermediateData,DATAPROCESSING_REST_API_URL) etc
-            // )
-            .then(() => { this.setState({ jsonData: JSON.stringify(intermediateData) }); });
+
+        //-------------------------        CRAWLER CALL     --------------------------------------
+        intermediateData = await CrawlerService.callApi(this.props.firstConcept, this.props.secondConcept, CRAWLER_REST_API_URL);
+        console.log("crawler response:", intermediateData.data);
+        //-------------------------         END CRAWLER CALL        -------------------------------
+
+        this.setState({jsonData: JSON.stringify(intermediateData.data)})
+
+        //-------------------------         DATA PROCESSING CALL    --------------------------------
+        intermediateData = await ComponentCaller.callApi(intermediateData.data, DATA_PROCESSING_REST_API_URL);
+        console.log("data processing response:", intermediateData.data );
+        //-------------------------     END  DATA PROCESSING CALL    --------------------------------
+
+        //-------------------------         STATISTICS CALL    --------------------------------
+        intermediateData = await ComponentCaller.callApi(intermediateData.data, STATISTICS_REST_API_URL);
+        console.log("statistics response:", intermediateData.data);
+        //-------------------------     END STATISTICS CALL    --------------------------------
 
 
+        this.resultObject = new ResultObject(intermediateData.data);
+        console.log("FINAL RESPONSE", this.resultObject);
 
-        // Aici o sa fie apelate toate componentele, iar ultimul rand va fi un setState. In jsonData va fi tot ce primim de la statistici
-
+        this.setState({jsonData: JSON.stringify(intermediateData.data)})
     }
 
     render() {
+    
         return (
             <h2>The HTTP response: {this.state.jsonData}</h2>   // Aici o sa vina cam tot front-u BACIU
         )
+        
     }
 
-    async callAllModules() {
-        //this.props.firstConcept = concept1, this.props.secondConcept = concept2
-
-
-
-    }
+    
 }
 
 export default ResponseComponent;

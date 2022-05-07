@@ -1,17 +1,30 @@
 
+
+
+
 class ComponentCaller {
-    static callApi(JSONData, serviceUrl) //as a real JSON, not a string
-    {
-
-        var config = {
-            method: 'post',
-            url: serviceUrl,
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            data: JSONData
-        };
-
-        return axios(config);
+    callApi(jsonData, moduleURL) {
+        try{
+           const axios = require('axios');
+            var config = {
+                method: 'post',
+                url: moduleURL,
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                data: jsonData
+            };
+            return axios(config);
+        }
+        catch (err)
+        {
+            console.error(err);
+        }
+    
     }
+
 }
+
+
+
+export default new ComponentCaller();
