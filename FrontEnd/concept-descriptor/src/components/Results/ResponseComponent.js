@@ -3,7 +3,7 @@ import CrawlerService from '../../services/CrawlerService';
 // import DataProcessingService from '../../services/DataProcessingService'
 // import StatisticsService from '../../services/StatisticsService';
 
-const CRAWLER_REST_API_URL = 'http://localhost:8090/crawl';
+const CRAWLER_REST_API_URL = 'https://crawler-r.herokuapp.com/crawl';
 //const DATAPROCESSING_REST_API_URL = '';
 //const STATISTICS_REST_API_URL = '';
 
