@@ -37,11 +37,15 @@ public class StatisticsService {
         finalList1.addAll(info1.getAdjectives());
         finalList1.addAll(info1.getNouns());
         finalList1.addAll(info1.getVerbs());
+        while (finalList1.remove("")) {
+        }
 
         List<String> finalList2 = new ArrayList<>();
         finalList2.addAll(info2.getAdjectives());
         finalList2.addAll(info2.getNouns());
         finalList2.addAll(info2.getVerbs());
+        while (finalList2.remove("")) {
+        }
 
         LinkedHashMap<String, Integer> hm1 = frequency(finalList1);
         LinkedHashMap<String, Integer> hm2 = frequency(finalList2);
