@@ -1,0 +1,84 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/*--------------------- contine poza din stanga si scrisul din dreapta; e tot ce se vede cu exceptia navbarului-------------------*/
+
+
+.im-pr {
+    background-color: #56C6D4;
+    display: flex;
+}
+
+.im-pr img {
+    height: 90vh;
+    left: -30rem;
+    position: relative;
+
+}
+
+/*---------------------------------------------------------------MESAJELE---------------------------------------------------------*/
+.mess1 {
+    color: #D46456;
+    font-size: 225%;
+    margin-top: 8vh;
+    text-align: center;
+    margin-right: 15vh;
+    margin-left: -20rem;
+    letter-spacing: 1px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.mess2 {
+    color: #636363;
+    font-size: 145%;
+    margin-top: 8vh;
+    text-align: center;
+    margin-right: 15vh;
+    margin-left: -19rem;
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+.mess3 {
+    color: #FFFFFF;
+    font-size: 125%;
+    margin-top: 6.5rem;
+    text-align: center;
+    margin-right: 15vh;
+    margin-left: -20rem;
+    letter-spacing: 1px;
+    border: 2px solid #32B5C5;
+    background: #32B5C5;
+    border-radius: 14px;
+    font-family: 'Montserrat', sans-serif;
+    box-shadow: 5px 6px #888888;
+}
+
+/*--------------------------------------buton-ul de get started-------------------------------------------------*/
+.start {
+    margin-top: 5rem;
+}
+
+.start a {
+    font-size: 150%;
+    margin-left: -8rem;
+    background-color: #F26655;
+    color: white;
+    padding: 15px 25px;
+    text-decoration: none;
+    border: 1px solid #333;
+    border-style: groove;
+    border-width: 4px;
+    border-radius: 8px;
+    box-shadow: 1px 1px #333;
+}
+
+.start a:hover {
+    background-color: #D46456;
+}
+
+/*---------------------------------------------------gata buton------------------------------------------------*/
