@@ -13,14 +13,14 @@ import java.util.List;
 @Data
 @AllArgsConstructor
 public class StatisticsOutputObject {
-    String concept1;
-    String def1;
-    String chart1;
-    String concept2;
+    String concept1;   //primul concept primit
+    String def1;    //definitia pt primul concept
+    String chart1;      //diagrama
+    String concept2;  
     String def2;
     String chart2;
-    List<String> intersect;
-    List<String> diferit1;
+    List<String> intersect;     //asemanarile dintre cele doua concepte
+    List<String> diferit1;      //chestii specifice primului concept
     List<String> diferit2;
 
 }
