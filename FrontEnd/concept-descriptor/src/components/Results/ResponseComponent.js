@@ -48,6 +48,40 @@ class ResponseComponent extends React.Component {
     }
 
     render() {
+
+        this.resultObject = new ResultObject(
+            {
+                "concep1": {
+                  "concept": "cuvant",
+                  "def": "definitia cuvantului",
+                  "chart": "chart?bkg=white&c={ type: 'bar', data: { labels: ['Q1', 'Q2', 'Q3', 'Q4'], datasets: [{ label: 'Users', data: [50, 60, 70, 180] }] }}"
+                },
+                "concep2": {
+                  "concept": "cuvant",
+                  "def": "definitia cuvantului",
+                  "chart":"chart?bkg=white&c={ type: 'bar', data: { labels: ['Q1', 'Q2', 'Q3', 'Q4'], datasets: [{ label: 'Revenue', data: [100, 200, 300, 400] }] }}"
+                },
+                "intersect": [
+                  "cuvant1",
+                  "cuvant2",
+                  "cuvant3",
+                  "cuvant4"
+                ],
+                "differentc1": [
+                  "cuvant1",
+                  "cuvant2",
+                  "cuvant3",
+                  "cuvant4"
+                ],
+                "differentc2": [
+                  "cuvant1",
+                  "cuvant2",
+                  "cuvant3",
+                  "cuvant4"
+                ]
+              }
+        );
+        // asa faci call: resultObject.concep1.def
     
         return (
             <body>
@@ -60,32 +94,19 @@ class ResponseComponent extends React.Component {
                         </div>
 
                         <div className='Concept'>
-                            {this.props.firstConcept}
+                        {this.resultObject.concep1.concept}
                         </div>
                         <div className='text-info'>
                              <h2>First concept definition:</h2>
                          </div>
                         <div className='info'>
-                            <h4>
-                                blah blah blah blah blah
-                                blah blah blah blah blah
-                                blah blah blah blah blah
-                                blah blah blah blah blah
-                                blah blah blah blah blah
-                            </h4>
+                            {this.resultObject.concep1.def}
                         </div>
                         <div className='text-info'>
                              <h2>First concept chart:</h2>
                          </div>
                         <div className='chart'>
-                            <h6>
-                                ceva tabela/chart sau cum vrei sa ii spui
-                                blah blah blah blah blah
-                                blah blah blah blah blah
-                                blah blah blah blah blah
-                                blah blah blah blah blah
-                                blah blah blah blah blah
-                            </h6>
+                            {this.resultObject.concep1.chart}
                         </div>
                     </div>
 
@@ -94,19 +115,13 @@ class ResponseComponent extends React.Component {
                             <h2>Second concept:</h2>
                         </div>
                         <div className='Concept'>
-                            {this.props.secondConcept}
+                            {this.resultObject.concep2.concept}
                         </div>
                         <div className='text-info'>
                              <h2>Second concept definition:</h2>
                          </div>
                         <div className='info'>
-                            <h4>
-                                blah blah blah blah blah
-                                blah blah blah blah blah
-                                blah blah blah blah blah
-                                blah blah blah blah blah
-                                blah blah blah blah blah
-                            </h4>
+                            {this.resultObject.concep2.def}
                         </div>
 
                         <div className='text-info'>
@@ -114,14 +129,7 @@ class ResponseComponent extends React.Component {
                          </div>
 
                         <div className='chart'>
-                            <h6>
-                                ceva tabela/chart sau cum vrei sa ii spui
-                                blah blah blah blah blah
-                                blah blah blah blah blah
-                                blah blah blah blah blah
-                                blah blah blah blah blah
-                                blah blah blah blah blah
-                            </h6>
+                            {this.resultObject.concep2.chart}
                         </div>
                     </div>
                 </div>
@@ -129,18 +137,7 @@ class ResponseComponent extends React.Component {
                     <h2>Common chart:</h2>
                 </div>
                 <div className='common'>
-                    <h6>
-                        TABELA COMUNA DINTRE CELE 2 CONCEPTE;
-                        blah blah blah blah blah
-                        blah blah blah blah blah
-                        blah blah blah blah blah
-                        blah blah blah blah blah
-                        blah blah blah blah blah
-                        blah blah blah blah blah
-                        blah blah blah blah blah
-                        blah blah blah blah blah
-                        blah blah blah blah blah
-                    </h6>
+                    {this.resultObject.intersect}
                 </div>
                 <br />
                 <br />
