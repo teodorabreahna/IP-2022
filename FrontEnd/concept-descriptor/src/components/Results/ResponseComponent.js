@@ -50,7 +50,105 @@ class ResponseComponent extends React.Component {
     render() {
     
         return (
-            <h2>The HTTP response: {this.state.jsonData}</h2>   // Aici o sa vina cam tot front-u BACIU
+            <body>
+            <div className='Body-div'>
+                <div className='different'>
+                    <div className='left-div'>
+
+                        <div className='text-info'>
+                            <h2>First concept:</h2>
+                        </div>
+
+                        <div className='Concept'>
+                            {this.props.firstConcept}
+                        </div>
+                        <div className='text-info'>
+                             <h2>First concept definition:</h2>
+                         </div>
+                        <div className='info'>
+                            <h4>
+                                blah blah blah blah blah
+                                blah blah blah blah blah
+                                blah blah blah blah blah
+                                blah blah blah blah blah
+                                blah blah blah blah blah
+                            </h4>
+                        </div>
+                        <div className='text-info'>
+                             <h2>First concept chart:</h2>
+                         </div>
+                        <div className='chart'>
+                            <h6>
+                                ceva tabela/chart sau cum vrei sa ii spui
+                                blah blah blah blah blah
+                                blah blah blah blah blah
+                                blah blah blah blah blah
+                                blah blah blah blah blah
+                                blah blah blah blah blah
+                            </h6>
+                        </div>
+                    </div>
+
+                    <div className='right-div'>
+                        <div className='text-info'>
+                            <h2>Second concept:</h2>
+                        </div>
+                        <div className='Concept'>
+                            {this.props.secondConcept}
+                        </div>
+                        <div className='text-info'>
+                             <h2>Second concept definition:</h2>
+                         </div>
+                        <div className='info'>
+                            <h4>
+                                blah blah blah blah blah
+                                blah blah blah blah blah
+                                blah blah blah blah blah
+                                blah blah blah blah blah
+                                blah blah blah blah blah
+                            </h4>
+                        </div>
+
+                        <div className='text-info'>
+                             <h2>Second concept chart:</h2>
+                         </div>
+
+                        <div className='chart'>
+                            <h6>
+                                ceva tabela/chart sau cum vrei sa ii spui
+                                blah blah blah blah blah
+                                blah blah blah blah blah
+                                blah blah blah blah blah
+                                blah blah blah blah blah
+                                blah blah blah blah blah
+                            </h6>
+                        </div>
+                    </div>
+                </div>
+                <div className='text-info'>
+                    <h2>Common chart:</h2>
+                </div>
+                <div className='common'>
+                    <h6>
+                        TABELA COMUNA DINTRE CELE 2 CONCEPTE;
+                        blah blah blah blah blah
+                        blah blah blah blah blah
+                        blah blah blah blah blah
+                        blah blah blah blah blah
+                        blah blah blah blah blah
+                        blah blah blah blah blah
+                        blah blah blah blah blah
+                        blah blah blah blah blah
+                        blah blah blah blah blah
+                    </h6>
+                </div>
+                <br />
+                <br />
+            </div> 
+            <footer className='footer'>
+
+            </footer>
+        </body>      
         )
         
     }

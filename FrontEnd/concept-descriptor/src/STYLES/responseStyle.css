@@ -1,0 +1,95 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    height: 100%;
+}
+
+/*contine tot ce vezi*/
+.Body-div{
+    background-color: #32B5C5;
+    height:110%;
+    width: 100%;
+}
+
+/*primul copil al body ului */
+.different{
+    display: flex;
+    justify-content: space-between;
+}
+
+/*al doilea copil*/
+.common{
+    font-size: 180%;
+    max-width: 40%;
+    border:2px solid #F26655;
+    box-shadow: 5px 10px 8px #2c2a2a;
+    background-color: #F26655;
+    border-radius: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.left-div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.right-div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.text-info{
+    margin-top: 6%;
+    margin-bottom: 1%;
+    font-size: 100%;
+    font-weight: 500;
+}
+
+.Concept{
+    border:2px solid #F26655;
+    border-radius: 15px;
+    background-color: #F26655;
+    height: 6vh;
+    width: 25vh;
+    box-shadow: 5px 10px 8px #2c2a2a;
+    font-size: 150%;
+    font-weight: 600;
+}
+
+.info{
+    font-size: 180%;
+    max-width: 70%;
+    border:2px solid #F26655;
+    box-shadow: 5px 10px 8px #2c2a2a;
+    background-color: #F26655;
+    border-radius: 15px;
+}
+
+.chart{
+    font-size: 180%;
+    max-width: 50%;
+    border:2px solid #F26655;
+    box-shadow: 5px 10px 8px #2c2a2a;
+    background-color: #F26655;
+    border-radius: 15px;
+}
+
+.footer{
+    height: 10vh;
+}
+
+@media only screen and (max-width: 1000px) {
+    .different{
+        flex-direction: column;
+    }
+    .Concept{
+        margin-top: 1%;
+    }
+  }
