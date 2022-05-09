@@ -47,10 +47,11 @@ public class GetTweet {
                 System.out.println("Done writing output for "+args[i]+" in the JSON file.");
             }
             mapper.writeValue(new File("output_twitter.json"),jsonTweets);
+
         } catch (TwitterException te) {
             te.printStackTrace();
             System.out.println("Failed to search tweets: " + te.getMessage());
-            System.exit(-1);
+            //System.exit(-1);
         }
     }
 }
