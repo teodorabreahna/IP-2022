@@ -7,7 +7,7 @@ import About from "./components/About"
 import Input from "./components/Input"
 import NavBar from "./components/NavBar";
 import Results from "./components/Results";
-
+import cors from 'cors';
 function App() {
   return (
     <div className="App">

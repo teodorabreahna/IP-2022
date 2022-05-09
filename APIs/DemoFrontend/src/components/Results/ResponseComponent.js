@@ -5,7 +5,7 @@ import CrawlerService from '../../services/CrawlerService';
 import ResultObject from './ResultObject';
 import ComponentCaller from '../../services/ComponentCaller'
 
-const CRAWLER_REST_API_URL = 'https://crawler-r.herokuapp.com/crawl';
+const CRAWLER_REST_API_URL = 'https://crawler2-ip.herokuapp.com/crawler';
 const DATA_PROCESSING_REST_API_URL = 'https://dataprocessing-ip.herokuapp.com/dataprocessing';
 const STATISTICS_REST_API_URL = 'https://stats-ip.herokuapp.com/stats';
 
@@ -21,7 +21,7 @@ class ResponseComponent extends React.Component {
 
    async componentDidMount() {
 
-        var intermediateData;
+        var intermediateData={"data" : "un stirng nu conteaza ce"};
 
         //-------------------------        CRAWLER CALL     --------------------------------------
         intermediateData = await CrawlerService.callApi(this.props.firstConcept, this.props.secondConcept, CRAWLER_REST_API_URL);
