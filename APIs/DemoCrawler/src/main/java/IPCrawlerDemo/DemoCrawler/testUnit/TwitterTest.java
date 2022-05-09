@@ -32,5 +32,5 @@ public class TwitterTest {
     void testContent(){
         assertEquals(1000,crawler.processInfo(input).size());
     }
-    
+
 }
