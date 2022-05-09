@@ -3,6 +3,7 @@ package IPCrawlerDemo.DemoCrawler.Services;
 import IPCrawlerDemo.DemoCrawler.models.StatisticsInputObject;
 import IPCrawlerDemo.DemoCrawler.models.StatisticsOutputObject;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.LinkedHashMap;
@@ -60,7 +61,16 @@ public class StatisticsService {
         List<String> diff1 = concept1.differences(concept2);
         List<String> diff2 = concept2.differences(concept1);
 
-        StatisticsOutputObject statisticsOutputObject = new StatisticsOutputObject(info1.getTopic(), "definitie 1", concept1.setRelevant(), info2.getTopic(),"definitie 2", concept2.setRelevant(), similarities, diff1, diff2);
+        List<String> def1 = new ArrayList();
+        List<String> def2 = new ArrayList();
+        try {
+            def1 = new DictionaryAccessPoint().getDefinitions(concept1.getConcept());
+            def2 = new DictionaryAccessPoint().getDefinitions(concept2.getConcept());
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        StatisticsOutputObject statisticsOutputObject = new StatisticsOutputObject(info1.getTopic(), def1, concept1.setRelevant(), info2.getTopic(),def2, concept2.setRelevant(), similarities, diff1, diff2);
         //StatisticsOutputObject statisticsOutputObject = new StatisticsOutputObject(info1.getTopic(), "definitie 1", "chart?bkg=white&c={ type: 'bar', data: { labels: ['dog', 'man', 'woman', 'hello', 'dog'], datasets: [{ label: 'Users', data: [4, 3, 1, 1, 4] }] }}", info2.getTopic(),"definitie 2","chart?bkg=white&c={ type: 'bar', data: { labels: ['woman', 'rain', 'sun', 'man', 'woman'], datasets: [{ label: 'Users', data: [4, 2, 1, 1, 4] }] }}", similarities, diff1, diff2);
         return statisticsOutputObject;
     }
