@@ -1,5 +1,6 @@
 package IPCrawlerDemo.DemoCrawler.services;
 
+import IPCrawlerDemo.DemoCrawler.backend.twittercollect.FilterLanguages;
 import IPCrawlerDemo.DemoCrawler.backend.twittercollect.GetTweet;
 import IPCrawlerDemo.DemoCrawler.models.CrawlerInputObject;
 import IPCrawlerDemo.DemoCrawler.models.CrawlerOutputObject;
@@ -29,6 +30,7 @@ public class CrawlerService {
         } catch (IOException e) {
             e.printStackTrace();
         }
+            FilterLanguages.filterJSON(); // language filter, comment to remove.
         try{
             ObjectMapper mapper = new ObjectMapper();
             return Arrays.asList(mapper.readValue(Paths.get("output_twitter.json").toFile(), CrawlerOutputObject[].class));
