@@ -84,7 +84,7 @@ class ResponseComponent extends React.Component {
         // asa faci call: resultObject.concep1.def
     
         return (
-            <body>
+            <div>
             <div className='Body-div'>
                 <div className='different'>
                     <div className='left-div'>
@@ -145,7 +145,7 @@ class ResponseComponent extends React.Component {
             <footer className='footer'>
 
             </footer>
-        </body>      
+        </div>      
         )
         
     }
