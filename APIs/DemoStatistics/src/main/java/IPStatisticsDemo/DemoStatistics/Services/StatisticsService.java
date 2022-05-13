@@ -1,7 +1,7 @@
-package IPCrawlerDemo.DemoCrawler.Services;
+package IPStatisticsDemo.DemoStatistics.Services;
 
-import IPCrawlerDemo.DemoCrawler.models.StatisticsInputObject;
-import IPCrawlerDemo.DemoCrawler.models.StatisticsOutputObject;
+import IPStatisticsDemo.DemoStatistics.models.StatisticsInputObject;
+import IPStatisticsDemo.DemoStatistics.models.StatisticsOutputObject;
 
 import java.io.IOException;
 import java.util.*;

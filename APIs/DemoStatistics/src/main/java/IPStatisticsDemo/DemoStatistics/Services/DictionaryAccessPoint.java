@@ -1,4 +1,4 @@
-package IPCrawlerDemo.DemoCrawler.Services;
+package IPStatisticsDemo.DemoStatistics.Services;
 
 import org.json.JSONArray;
 import org.json.JSONObject;

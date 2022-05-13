@@ -1,9 +1,9 @@
-package IPCrawlerDemo.DemoCrawler.controller;
+package IPStatisticsDemo.DemoStatistics.controller;
 
 
-import IPCrawlerDemo.DemoCrawler.Services.StatisticsService;
-import IPCrawlerDemo.DemoCrawler.models.StatisticsInputObject;
-import IPCrawlerDemo.DemoCrawler.models.StatisticsOutputObject;
+import IPStatisticsDemo.DemoStatistics.Services.StatisticsService;
+import IPStatisticsDemo.DemoStatistics.models.StatisticsInputObject;
+import IPStatisticsDemo.DemoStatistics.models.StatisticsOutputObject;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;

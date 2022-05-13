@@ -1,4 +1,4 @@
-package IPCrawlerDemo.DemoCrawler.models;
+package IPStatisticsDemo.DemoStatistics.models;
 
 
 import lombok.AllArgsConstructor;

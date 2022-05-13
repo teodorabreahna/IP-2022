@@ -1,12 +1,12 @@
-package IPCrawlerDemo.DemoCrawler;
+package IPStatisticsDemo.DemoStatistics;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class DemoCrawlerApplication {
+public class DemoStatisticsApplication {
 	public static void main(String[] args) {
-		SpringApplication.run(DemoCrawlerApplication.class, args);
+		SpringApplication.run(DemoStatisticsApplication.class, args);
 	}
 
 }
