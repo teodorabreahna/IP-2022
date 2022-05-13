@@ -6,13 +6,15 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.util.List;
+
 @Getter
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
 public class StatisticsInputObject {
-    private String concept1;
-    private String concept2;
-
-
+    String topic;
+    List<String> nouns;
+    List<String> adjectives;
+    List<String> verbs;
 }
