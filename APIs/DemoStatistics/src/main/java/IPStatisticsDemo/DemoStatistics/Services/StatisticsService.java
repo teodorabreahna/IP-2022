@@ -27,6 +27,59 @@ public class StatisticsService {
         return hs;
     }
 
+    public String setPieChart(StatisticsInputObject info1, StatisticsInputObject info2){
+        //  chart?c={type:'pie',data:{labels:['Concept1','Concept2'], datasets:[{data:[40,60]}]}}
+        String relevant1;
+
+        List<String> finalList1 = new ArrayList<>();
+        finalList1.addAll(info1.getAdjectives());
+        finalList1.addAll(info1.getNouns());
+        finalList1.addAll(info1.getVerbs());
+        while (finalList1.remove("")) {
+        }
+
+        List<String> finalList2 = new ArrayList<>();
+        finalList2.addAll(info2.getAdjectives());
+        finalList2.addAll(info2.getNouns());
+        finalList2.addAll(info2.getVerbs());
+        while (finalList2.remove("")) {
+        }
+
+        relevant1 = new String();
+        relevant1 = relevant1 + "chart?c={type:'pie',data:{labels:['";
+        relevant1 = relevant1 + info1.getTopic();
+        relevant1 = relevant1 + "','";
+        relevant1 = relevant1 + info2.getTopic();
+        relevant1 = relevant1 + "'], datasets:[{data:[";
+        relevant1 = relevant1 + finalList1.size() + "," + finalList2.size() + "]}]}}";
+
+        return relevant1;
+    }
+
+    public String setBarChart(StatisticsInputObject info1, StatisticsInputObject info2) {
+        //  chart?c={type:'bar',data:{labels:['Nouns','Adjectives', 'Verbs'], datasets:[{label:'Concept1',data:[50,60,70]},{label:'Concept2',data:[100,200,300]}]}}
+        while (info1.getNouns().remove("")) {}
+        while (info1.getAdjectives().remove("")) {}
+        while (info1.getVerbs().remove("")) {}
+        while (info2.getNouns().remove("")) {}
+        while (info2.getAdjectives().remove("")) {}
+        while (info2.getVerbs().remove("")) {}
+
+        String relevant2;
+        relevant2 = new String();
+        relevant2 = relevant2 + "chart?c={type:'bar',data:{labels:['Nouns','Adjectives', 'Verbs'], datasets:[{label:'";
+        relevant2 = relevant2 + info1.getTopic();
+        relevant2 = relevant2 + "',data:[";
+        relevant2 = relevant2 + info1.getNouns().size() + "," + info1.getAdjectives().size() + "," + info1.getVerbs().size();
+        relevant2 = relevant2 + "]},{label:'";
+        relevant2 = relevant2 + info2.getTopic();
+        relevant2 = relevant2 + "',data:[";
+        relevant2 = relevant2 + info2.getNouns().size() + "," + info2.getAdjectives().size() + "," + info2.getVerbs().size();
+        relevant2 = relevant2 + "]}]}}";
+
+        return relevant2;
+    }
+
     private StatisticsOutputObject doSomeStuff(StatisticsInputObject info1, StatisticsInputObject info2)
     {
         //prelucrati si apelati api-urile etc
@@ -109,7 +162,12 @@ public class StatisticsService {
             e.printStackTrace();
         }
 
-        StatisticsOutputObject statisticsOutputObject = new StatisticsOutputObject(info1.getTopic(), def1, concept1.setRelevant(), info2.getTopic(),def2, concept2.setRelevant(), similarities, diff1, diff2);
+        //String pieChart="chart?c={type:'pie',data:{labels:['Concept1','Concept2'], datasets:[{data:[40,60]}]}}";
+        //String barChart="chart?c={type:'bar',data:{labels:['Nouns','Adjectives', 'Verbs'], datasets:[{label:'Concept1',data:[50,60,70]},{label:'Concept2',data:[100,200,300]}]}}";
+
+        String pieChart = setPieChart(info1, info2);
+        String barChart = setBarChart(info1, info2);
+        StatisticsOutputObject statisticsOutputObject = new StatisticsOutputObject(info1.getTopic(), def1, concept1.setRelevant(), info2.getTopic(),def2, concept2.setRelevant(), similarities, diff1, diff2,pieChart,barChart);
         //StatisticsOutputObject statisticsOutputObject = new StatisticsOutputObject(info1.getTopic(), "definitie 1", "chart?bkg=white&c={ type: 'bar', data: { labels: ['dog', 'man', 'woman', 'hello', 'dog'], datasets: [{ label: 'Users', data: [4, 3, 1, 1, 4] }] }}", info2.getTopic(),"definitie 2","chart?bkg=white&c={ type: 'bar', data: { labels: ['woman', 'rain', 'sun', 'man', 'woman'], datasets: [{ label: 'Users', data: [4, 2, 1, 1, 4] }] }}", similarities, diff1, diff2);
         return statisticsOutputObject;
     }

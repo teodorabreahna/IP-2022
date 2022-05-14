@@ -1,5 +1,7 @@
 package IPStatisticsDemo.DemoStatistics.Services;
 
+import IPStatisticsDemo.DemoStatistics.models.StatisticsInputObject;
+
 import java.util.*;
 
 import static java.util.stream.Collectors.*;
@@ -42,10 +44,6 @@ public class Concept {
 
     public String setRelevant(){
         int contor=0;
-        /*
-        StringBuilder sb1 = new StringBuilder("chart?bkg=white&c={ type: 'bar', data: { labels: [");
-        StringBuilder sb2 = new StringBuilder();
-         */
         relevant = new String();
         String s = new String();
         relevant = relevant +"chart?bkg=white&c={ type: 'bar', data: { labels: [";
@@ -62,7 +60,6 @@ public class Concept {
                 contor++;
             }
         }
-
         relevant=relevant+"], datasets: [{ label: 'Users', data: ["+s+"] }] }}";
         return relevant;
     }
