@@ -32,7 +32,6 @@ public class FilterLanguages {
         System.out.println("Reading the JSON file, waiting to filter.");
         readJSON();
         for(CrawlerOutputObject s: tweetObjects){
-            System.out.println("Filtering JSON object.");
             String copy = s.getText();
             byte[] copyBytes = copy.getBytes();
             String asciiEncodedString = new String(copyBytes, StandardCharsets.US_ASCII);
@@ -46,6 +45,7 @@ public class FilterLanguages {
                 tweetObjects.remove(s);
             }
         }
+        System.out.println("Filtering JSON object.");
         ObjectMapper tweetMapper = new ObjectMapper();
         try{
             System.out.println("Writing to filtered JSON file.");

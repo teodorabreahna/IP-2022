@@ -6,17 +6,21 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.http.HttpStatus;
+import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.ResponseStatus;
 
-import java.io.IOException;
-
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 
 @SpringBootTest
+@ResponseBody
+@ResponseStatus(HttpStatus.SERVICE_UNAVAILABLE)
 class DemoCrawlerApplicationTests {
 
 	CrawlerService crawler;
 	CrawlerInputObject input;
+
 	@BeforeEach
 	void setUp() {
 		crawler = new CrawlerService();
@@ -26,16 +30,28 @@ class DemoCrawlerApplicationTests {
 	}
 	@Test
 	@DisplayName("No data found/Wrong input")
-	void testWrongInput() throws IOException {
+	void testWrongInput() {
 		assertNotNull(crawler.processInfo(input));
 	}
 
 	@Test
 	@DisplayName("Has content")
 	void testContent(){
-		assertEquals(1000,crawler.processInfo(input).size());
+        assertNotEquals(0,crawler.processInfo(input).size());
+		//assertEquals(1000,crawler.processInfo(input).size());
 	}
+    @Test
+    @DisplayName("Request limit")
+    void reqLimit(){
+        String[] queries ={"man","woman","car","bike","nike","adidas","mercedes","lexus","iphone","samsung","levi9","beenear","angular","react","gandhi","hitler","java","javascript","facebook","instagram","facebook","twitter","redbull","monster","cola","pepsi"};
+        for(int i=0;i< queries.length;i++)
+        {
 
+			input.setConcept1(queries[i]);
+			input.setConcept2(queries[i+1]);
+			assertNotNull(crawler.processInfo(input));
+        }
+    }
 	@Test
 	void contextLoads() {
 	}

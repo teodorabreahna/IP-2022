@@ -9,7 +9,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class GetTweet {
-    public static void main(String[] args) throws JSONException, IOException  {
+    public static void main(String[] args) throws JSONException, IOException {
         ObjectMapper mapper = new ObjectMapper();
         ArrayList<TweetObj> jsonTweets = new ArrayList<>();
         if (args.length < 1) {
@@ -44,12 +44,14 @@ public class GetTweet {
                     }
                     k++;
 
-                } while ((queries.set(i,queryResults.get(i).nextQuery()))!= null && k<5);
+                } while ((queries.set(i,queryResults.get(i).nextQuery()))!= null && k<10);
                 System.out.println("Done writing output for "+args[i]+" in the JSON file.");
             }
             mapper.writeValue(new File("output_twitter.json"),jsonTweets);
 
         } catch (TwitterException te) {
+            TweetObj x = new TweetObj(null,null,null);
+            mapper.writeValue(new File("output_twitter.json"),x);
             te.printStackTrace();
             System.out.println("Failed to search tweets: " + te.getMessage());
             //System.exit(-1);
