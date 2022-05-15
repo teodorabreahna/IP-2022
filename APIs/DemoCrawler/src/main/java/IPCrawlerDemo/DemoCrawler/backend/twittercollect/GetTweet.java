@@ -50,7 +50,7 @@ public class GetTweet {
             mapper.writeValue(new File("output_twitter.json"),jsonTweets);
 
         } catch (TwitterException te) {
-            TweetObj x = new TweetObj(null,null,null);
+            TweetObj x = new TweetObj("NULL","NULL","NULL");
             mapper.writeValue(new File("output_twitter.json"),x);
             te.printStackTrace();
             System.out.println("Failed to search tweets: " + te.getMessage());
