@@ -1,82 +1,29 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-/*-------------------------------------------------------BARA DE NAVIGARE-----------------------------------------------------------*/
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    width: 80%;
-    align-items: center;
-    background-color:  #000000;
-    height: 10vh;
-    font-size: 135%;
-    width: auto;
-    font-family: 'Montserrat', sans-serif;
-    position: sticky;
-}
 
-li{
-    float : right;
-    list-style-type: none;
-}
-
-li a{
-    text-decoration: none;
-    display: block;
-    padding: 14px 16px;
-    color: white;
-    margin-right: 7rem;
-    letter-spacing: 5px;
-    font-size: 117%;
-}
-
-li a:hover {
-    background-color: grey;
-}
+/*-------------- Aici e zona in care introduci conceptele----------------------*/
 
 
-
-/*---------------ICONITA + TITLUL SITE-ULUI-------------*/
-.title{
-    display: flex;
-    justify-content: space-between;
-    margin-left: 3rem;
-}
-
-.title img{
-    width: 60px;
-    height: 50px;
-}
-
-
-.title h2{
-    color: white;
-    letter-spacing: 4px;
-    font-weight: 200;
-}
-
-/*-------------------------------------------------END BARA DE NAVIGARE---------------------------------------------------------*/
-
-.im-pr-index2{
+.im-pr-index2 {
     background-color: #F26655;
     flex-direction: column;
 }
 
-.im-pr-index2 img{
-    height: 29rem;
-    margin-left: 28.5rem;
+.im-pr-index2 img {
+    margin-left: 10%;
     z-index: 2;
+    width: 51%;
 }
 
-.sb{
-    height: 6rem;
+.sb {
+    height: 70%;
     width: 20rem;
     font-size: 170%;
-    margin-bottom: 10rem;
     margin-left: 18rem;
-    margin-top: 7rem;
+    margin-top: 6%;
     z-index: 1;
     background-color: #32B5C5;
     border-radius: 10px;
@@ -85,29 +32,49 @@ li a:hover {
     color: #D3D3D3;
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
+
 }
 
-.submit{
+.search-bars form{
+    height: 80%;
+}
+
+.submit {
     height: 2.5rem;
     width: 10rem;
     background: #56C6D4;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 10px;
     z-index: 1;
-    margin-top: 26rem;
-    margin-left: -34.4rem;
-    color: #FFFFFF ;
+    margin-top: 32%;
+    margin-left: -33.1%;
+    color: #FFFFFF;
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
     font-size: 120%;
 }
 
-.search-bars form{
+.search-bars form {
     display: flex;
     height: 8rem;
 }
 
-.footer{
-    height: 5rem;
-    background-color: #2E2E2E;
+
+@media screen and (max-width: 900px) {
+
+
+    .search-bars form{
+        flex-direction: column;
+        margin-left: 2%;
+    }
+
+    .submit{
+        margin-left: 2%;
+    }
+    
+
+    .im-pr-index2 img{
+        display:none;
+    }
+
 }

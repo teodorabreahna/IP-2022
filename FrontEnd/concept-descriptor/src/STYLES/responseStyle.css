@@ -10,7 +10,7 @@ body{
 /*contine tot ce vezi*/
 .Body-div{
     background-color: #32B5C5;
-    height:110%;
+    height:100%;
     width: 100%;
 }
 
@@ -30,6 +30,7 @@ body{
     border-radius: 15px;
     margin-left: auto;
     margin-right: auto;
+    overflow: hidden;
 }
 
 

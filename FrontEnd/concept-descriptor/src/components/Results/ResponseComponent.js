@@ -94,7 +94,7 @@ class ResponseComponent extends React.Component {
                         </div>
 
                         <div className='Concept'>
-                        {this.resultObject.concep1.concept}
+                            {this.props.secondConcept};
                         </div>
                         <div className='text-info'>
                              <h2>First concept definition:</h2>
@@ -108,6 +108,7 @@ class ResponseComponent extends React.Component {
                         <div className='chart'>
                             {this.resultObject.concep1.chart}
                         </div>
+
                     </div>
 
                     <div className='right-div'>
@@ -134,16 +135,24 @@ class ResponseComponent extends React.Component {
                     </div>
                 </div>
                 <div className='text-info'>
-                    <h2>Common chart:</h2>
+                    <h2>First common chart:</h2>
                 </div>
                 <div className='common'>
                     {this.resultObject.intersect}
                 </div>
+
+                <div className='text-info'>
+                    <h2>Second common chart:</h2>
+                </div>
+                <div className='common'>
+                    {this.resultObject.intersect}
+                </div>
+
                 <br />
                 <br />
             </div> 
-            <footer className='footer'>
 
+            <footer className='footer'>
             </footer>
         </body>      
         )

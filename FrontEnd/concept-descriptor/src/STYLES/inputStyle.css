@@ -10,21 +10,24 @@
 .im-pr-index2 {
     background-color: #F26655;
     flex-direction: column;
+    min-height: 90vh;
 }
 
 .im-pr-index2 img {
-    height: 29rem;
-    margin-left: 28.5rem;
+    margin-left: 12vh;
+    margin-right: auto;
     z-index: 2;
+    max-width: 54%;
+    height: auto;
 }
 
 .sb {
-    height: 6rem;
+    height: 90%;
     width: 20rem;
     font-size: 170%;
-    margin-bottom: 10rem;
-    margin-left: 18rem;
-    margin-top: 7rem;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 6%;
     z-index: 1;
     background-color: #32B5C5;
     border-radius: 10px;
@@ -33,6 +36,7 @@
     color: #D3D3D3;
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
+
 }
 
 .submit {
@@ -42,8 +46,26 @@
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 10px;
     z-index: 1;
-    margin-top: 26rem;
-    margin-left: -34.4rem;
+    margin-top: 32%;
+    margin-right: auto;
+    margin-left: -33%;
+    color: #FFFFFF;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 120%;
+    display: none;
+}
+
+.submit2 {
+    height: 2.5rem;
+    width: 10rem;
+    background: #56C6D4;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    z-index: 1;
+    margin-top: 30%;
+    margin-right: auto;
+    margin-left:auto;
     color: #FFFFFF;
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
@@ -52,10 +74,88 @@
 
 .search-bars form {
     display: flex;
-    height: 8rem;
+    height: 10vh;
 }
 
 .footer {
     height: 5rem;
     background-color: #2E2E2E;
+}
+
+@media screen and (max-width: 1200px) {
+
+    .im-pr-index2 img{
+        margin-left: 5%;
+        margin-right: auto;
+        margin-top: 8vh;
+        max-width: 60%;
+    }
+
+    .im-pr-index2{
+        min-height: 90vh;
+        background-color: #F26655;
+        overflow: hidden;
+    }
+
+    .search-bars form{
+        flex-direction: column;
+    }
+
+    .sb{
+        margin-left: auto;
+        margin-right: auto;
+
+    }
+
+    .submit{
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 17%;
+        font-size: 150%;
+        display: block; 
+    }
+    .submit2{
+        display:none;
+    }
+
+}
+
+@media screen and (max-width: 1000px){
+    .im-pr-index2 img{
+        max-width: 80%;
+    }
+
+    .submit{
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 25%;
+        font-size: 150%;
+        display: block; 
+        width: 18vh;
+    }
+}
+
+@media screen and (max-width: 600px) {
+
+    .search-bars form{
+        flex-direction: column;
+        background-color: #F26655;
+    }
+
+    .im-pr-index2{
+        min-height: 90vh;
+        background-color: #F26655;
+    }
+
+    .im-pr-index2 img{
+        display: none;
+    }
+
+    .sb{
+        margin-top: 9vh;
+    }
+    .submit{
+        margin-top: 15rem;
+    }
+
 }
