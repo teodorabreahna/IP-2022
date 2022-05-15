@@ -29,11 +29,13 @@ class DemoCrawlerApplicationTests {
 	void testWrongInput() throws IOException {
 		assertNotNull(crawler.processInfo(input));
 	}
+
 	@Test
 	@DisplayName("Has content")
 	void testContent(){
 		assertEquals(1000,crawler.processInfo(input).size());
 	}
+
 	@Test
 	void contextLoads() {
 	}

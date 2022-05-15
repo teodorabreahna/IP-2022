@@ -1,5 +1,6 @@
 package IPCrawlerDemo.DemoCrawler.backend.twittercollect;
 
+import IPCrawlerDemo.DemoCrawler.backend.twittercollect.model.TweetObj;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import twitter4j.*;
 

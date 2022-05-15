@@ -1,4 +1,4 @@
-package IPCrawlerDemo.DemoCrawler.backend.twittercollect;
+package IPCrawlerDemo.DemoCrawler.backend.twittercollect.model;
 
 public class TweetObj {
     private String user;
