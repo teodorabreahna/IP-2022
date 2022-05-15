@@ -2,15 +2,26 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+
 }
 /*-------------------------------------------------------BARA DE NAVIGARE-----------------------------------------------------------*/
+body{
+    height: 100%;
+}
+.section1{
+    width: 100%;
+    background-color: #56C6D4;
+}
+.section2{
+    background-color: #56C6D4;
+}
 .navbar {
     display: flex;
     justify-content: space-between;
     width: 80%;
     align-items: center;
     background-color:  #000000;
-    height: 10vh;
+    height: 15%;
     font-size: 135%;
     width: auto;
     font-family: 'Montserrat', sans-serif;
@@ -20,6 +31,7 @@
 li{
     float : right;
     list-style-type: none;
+    width: 25%;
 }
 
 li a{
@@ -27,7 +39,7 @@ li a{
     display: block;
     padding: 14px 16px;
     color: white;
-    margin-right: 7rem;
+    margin-right: 22rem;
     letter-spacing: 5px;
     font-size: 117%;
 }
@@ -43,6 +55,8 @@ li a:hover {
     display: flex;
     justify-content: space-between;
     margin-left: 3rem;
+    width: 24%;
+    
 }
 
 .title img{
@@ -62,35 +76,36 @@ li a:hover {
 
 /*--------------------- contine poza din stanga si scrisul din dreapta; e tot ce se vede cu exceptia navbarului-------------------*/
 .im-pr{
-    background-color: #56C6D4;
     display: flex;
+    background-color: #56C6D4;
 }
 
 .im-pr img{
-    height: 90vh;
-    left: -30rem;
-    position: relative;
-   
+    height: 100%;
+    width: 100%;
+    margin-left: -40%;
+    background-color: #56C6D4;
 }
 /*---------------------------------------------------------------MESAJELE---------------------------------------------------------*/
 .mess1{
     color: #D46456;
     font-size: 225%;
-    margin-top: 8vh;
+    margin-top: 25%;
     text-align: center;
-    margin-right: 15vh;
-    margin-left: -20rem;
+    margin-right: 20%;
+    margin-left: -50%;
     letter-spacing: 1px;
     font-family: 'Montserrat', sans-serif;
 }
 
 .mess2{
-    color: #636363;
-    font-size: 145%;
-    margin-top: 8vh;
+    color: #50350f;
+    font-size: 199%;
+    margin-top: 15%;
     text-align: center;
-    margin-right: 15vh;
-    margin-left: -19rem;
+    margin-right: 20%;
+    margin-left: -50%;
+    letter-spacing: 1px;
     font-family: 'Montserrat', sans-serif;
 }
 
@@ -98,10 +113,10 @@ li a:hover {
 .mess3{
     color: #FFFFFF;
     font-size: 125%;
-    margin-top: 6.5rem;
+    margin-top: 15%;
     text-align: center;
-    margin-right: 15vh;
-    margin-left: -20rem;
+    margin-right: 20%;
+    margin-left: -50%;
     letter-spacing: 1px;
     border: 2px solid #32B5C5;
     background: #32B5C5;
@@ -116,7 +131,7 @@ li a:hover {
 
 .start a{
     font-size: 150%;
-    margin-left: -8rem;
+    margin-right: 38%;
     background-color: #F26655;
     color: white;
     padding: 15px 25px;
@@ -133,3 +148,137 @@ li a:hover {
 }
 
 /*---------------------------------------------------gata buton------------------------------------------------*/
+
+
+@media only screen and (max-width: 1000px) {
+    *{
+        background-color: #56C6D4;
+    }
+   h2{
+       color:#000000;
+   } 
+    .navbar{
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        background-color:  #000000;
+        font-size: 200%;
+        font-family: 'Montserrat', sans-serif;
+        background-color: #56C6D4;
+        color: black;
+    }
+    
+li{
+    float :none;
+    list-style-type: none;
+    align-items: center;
+
+}
+
+li a{
+    display: flex;
+    margin-right: -30%;
+    color: black;
+    letter-spacing: 5px;
+    margin-top: 55%;
+    font-size: 222%;
+}
+
+li a:hover {
+    background-color: grey;
+}
+
+.title{
+
+    margin-top: 11%;
+    width: 55%;
+    
+}
+
+.title img{
+    width: 150px;
+    height: 150px;
+}
+
+
+.title h2{
+    color: white;
+    letter-spacing: 4px;
+    font-weight: 200;
+}
+
+
+
+
+.im-pr{
+    flex-direction: column; 
+    background-color: #56C6D4;
+    margin-top: 25%;
+}
+
+.im-pr img{
+    height: 100%;
+    width: 100%;
+    image-orientation: flip;
+    background-color: #56C6D4;
+}
+.section2{
+    background-color: #56C6D4;
+    margin-left: 41%;
+
+}
+.mess1{
+    color: #D46456;
+    font-size: 225%;
+    margin-top: 25%;
+    text-align: center;
+    letter-spacing: 1px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.mess2{
+    color: #50350f;
+    font-size: 199%;
+    margin-top: 15%;
+    text-align: center;
+    letter-spacing: 1px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+.mess3{
+    color: #FFFFFF;
+    font-size: 125%;
+    margin-top: 15%;
+    text-align: center;
+
+    letter-spacing: 1px;
+    border: 2px solid #32B5C5;
+    background: #32B5C5;
+    border-radius: 14px;
+    font-family: 'Montserrat', sans-serif;
+    box-shadow: 5px 6px #888888;
+}
+.start{
+    margin-top: 10rem;
+}
+
+.start a{
+    font-size: 150%;
+    margin-right: 50%;
+    background-color: #F26655;
+    color: white;
+    padding: 15px 25px;
+    text-decoration: none;
+    border:1px solid #333;
+    border-style:groove;
+    border-width: 4px;
+    border-radius: 8px;
+    box-shadow: 1px 1px #333;
+}
+
+.start a:hover{
+    background-color: #D46456;
+}
+
+  }
