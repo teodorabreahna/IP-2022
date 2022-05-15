@@ -62,11 +62,12 @@ body{
     box-shadow: 5px 10px 8px #2c2a2a;
     font-size: 150%;
     font-weight: 600;
+    margin-bottom: 1rem;
 }
 
 .info{
     font-size: 180%;
-    max-width: 70%;
+    max-width: 55%;
     border:2px solid #F26655;
     box-shadow: 5px 10px 8px #2c2a2a;
     background-color: #F26655;

@@ -50,36 +50,37 @@ class ResponseComponent extends React.Component {
     render() {
 
         this.resultObject = new ResultObject(
-            {
-                "concep1": {
-                  "concept": "cuvant",
-                  "def": "definitia cuvantului",
-                  "chart": "chart?bkg=white&c={ type: 'bar', data: { labels: ['Q1', 'Q2', 'Q3', 'Q4'], datasets: [{ label: 'Users', data: [50, 60, 70, 180] }] }}"
-                },
-                "concep2": {
-                  "concept": "cuvant",
-                  "def": "definitia cuvantului",
-                  "chart":"chart?bkg=white&c={ type: 'bar', data: { labels: ['Q1', 'Q2', 'Q3', 'Q4'], datasets: [{ label: 'Revenue', data: [100, 200, 300, 400] }] }}"
-                },
-                "intersect": [
-                  "cuvant1",
-                  "cuvant2",
-                  "cuvant3",
-                  "cuvant4"
-                ],
-                "differentc1": [
-                  "cuvant1",
-                  "cuvant2",
-                  "cuvant3",
-                  "cuvant4"
-                ],
-                "differentc2": [
-                  "cuvant1",
-                  "cuvant2",
-                  "cuvant3",
-                  "cuvant4"
-                ]
-              }
+            { 
+            "concept1": "mere",
+            "def1": [
+             "A body of standing water, such as a lake or a pond. More specifically, it can refer to a lake that is broad in relation to its depth. Also included in place names such as Windermere."
+            ],
+
+            "chart1": "chart?bkg-white&c={ type: 'bar', data: { labels: ['ana', 'mere', 'are', 'mere'], datasets: [{ label: 'Users', data: [1, 1, 1, 1, 1] }] }}",
+            "concept2": "pere",
+            "def2": [
+            "A priest of the Roman Catholic Church, especially a French one. Also used as a title preceding the name of such a priest.",
+            "Sr. - Used after a proper name that is common to a father and his son to indicate that the father is being referred to rather than the son (junior, fils)."
+            ],
+
+            "chart2": "chart?c={ type: 'bar', data: { labels: ['ana', 'pere', 'are', 'ana', 'pere'], datasets: [{ label: 'Users', data: [1, 1, 1, 1, 1] }] }}",
+            "intersect" : [
+            "ana",
+            "are"
+            ],
+
+            "diferit1": [
+            "mere"
+            ],
+
+            "diferit2":[
+            "pere"
+            ],
+
+            "chartPie": "chart?c={type: 'pie', data:[labels: ['mere', 'pere'], datasets: [{ data:[3,3]}]}}",
+            "chartBar": "chart?c={type: 'bar', data: {labels: ['Nouns', 'Adjectives', 'Verbs'], datasets:[{label: 'mere', data:[2,0,1]},{label:'pere', data:[2,0,1]}]}}"
+
+            }
         );
         // asa faci call: resultObject.concep1.def
     
@@ -100,13 +101,13 @@ class ResponseComponent extends React.Component {
                              <h2>First concept definition:</h2>
                          </div>
                         <div className='info'>
-                            {this.resultObject.concep1.def}
+                            {this.resultObject.def1};
                         </div>
                         <div className='text-info'>
                              <h2>First concept chart:</h2>
                          </div>
                         <div className='chart'>
-                            {this.resultObject.concep1.chart}
+                            {this.resultObject.chart1}
                         </div>
 
                     </div>
@@ -116,38 +117,58 @@ class ResponseComponent extends React.Component {
                             <h2>Second concept:</h2>
                         </div>
                         <div className='Concept'>
-                            {this.resultObject.concep2.concept}
+                            {this.resultObject.concept2}
                         </div>
                         <div className='text-info'>
                              <h2>Second concept definition:</h2>
                          </div>
                         <div className='info'>
-                            {this.resultObject.concep2.def}
+                            {this.resultObject.def2}
                         </div>
 
                         <div className='text-info'>
                              <h2>Second concept chart:</h2>
                          </div>
 
-                        <div className='chart'>
-                            {this.resultObject.concep2.chart}
+                        <div className='chart'>  
+                            https://quickchart.io/{this.resultObject.chart2};
                         </div>
                     </div>
                 </div>
                 <div className='text-info'>
-                    <h2>First common chart:</h2>
+                    <h2>Intersected:</h2>
                 </div>
                 <div className='common'>
                     {this.resultObject.intersect}
                 </div>
 
                 <div className='text-info'>
-                    <h2>Second common chart:</h2>
+                    <h2>Diferit1:</h2>
                 </div>
                 <div className='common'>
-                    {this.resultObject.intersect}
+                    {this.resultObject.diferit1}
                 </div>
 
+                <div className='text-info'>
+                    <h2>Diferit2:</h2>
+                </div>
+                <div className='common'>
+                    {this.resultObject.diferit2}
+                </div>
+
+                <div className='text-info'>
+                    <h2>ChartPie:</h2>
+                </div>
+                <div className='common'>
+                    https://quickchart.io/{this.resultObject.chartPie};
+                </div>
+
+                <div className='text-info'>
+                    <h2>ChartBar:</h2>
+                </div>
+                <div className='common'>
+                    https://quickchart.io/{this.resultObject.chartBar};
+                </div>
                 <br />
                 <br />
             </div> 
