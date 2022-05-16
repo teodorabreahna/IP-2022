@@ -7,7 +7,8 @@ import About from "./components/About"
 import Input from "./components/Input"
 import NavBar from "./components/NavBar";
 import Results from "./components/Results";
-import cors from 'cors';
+import ResponseComponent from './components/Results/ResponseComponent';
+
 function App() {
   return (
     <div className="App">
@@ -17,6 +18,7 @@ function App() {
         <Route path="about" element={<About />} />
         <Route path="input" element={<Input />} />
         <Route path="results" element={<Results />} />
+        <Route path="ResponseComponent" element={<ResponseComponent />}/>
       </Routes>
     </div>
   );

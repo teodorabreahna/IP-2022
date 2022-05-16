@@ -10,7 +10,7 @@ function Results() {
 
     return (
         <nav className="results">
-            <h1> This is results Page for concepts {navigator.state.firstConcept}, {navigator.state.secondConcept}</h1>
+            {/* <h1> This is results Page for concepts {navigator.state.firstConcept}, {navigator.state.secondConcept}</h1> */}
             <ResponseComponent firstConcept = {navigator.state.firstConcept}  secondConcept = {navigator.state.secondConcept} />
         </nav>
     );
