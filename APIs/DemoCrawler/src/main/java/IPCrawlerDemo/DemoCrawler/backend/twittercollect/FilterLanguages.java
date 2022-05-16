@@ -17,7 +17,7 @@ import java.util.List;
 public class FilterLanguages {
         static List<CrawlerOutputObject> tweetObjects = null;
 
-    private static List<CrawlerOutputObject> readJSON() {
+    public static List<CrawlerOutputObject> readJSON() {
         try {
             ObjectMapper tweetMapper = new ObjectMapper();
             tweetObjects = tweetMapper.readValue(new File("output_twitter.json"), new TypeReference<List<CrawlerOutputObject>>() {

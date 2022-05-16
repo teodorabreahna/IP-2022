@@ -1,5 +1,6 @@
 package IPCrawlerDemo.DemoCrawler;
 
+import IPCrawlerDemo.DemoCrawler.backend.twittercollect.FilterLanguages;
 import IPCrawlerDemo.DemoCrawler.models.CrawlerInputObject;
 import IPCrawlerDemo.DemoCrawler.services.CrawlerService;
 import org.junit.jupiter.api.BeforeEach;
@@ -20,6 +21,7 @@ class DemoCrawlerApplicationTests {
 
 	CrawlerService crawler;
 	CrawlerInputObject input;
+	FilterLanguages filter;
 
 	@BeforeEach
 	void setUp() {
@@ -52,6 +54,20 @@ class DemoCrawlerApplicationTests {
 			assertNotNull(crawler.processInfo(input));
         }
     }
+	@Test
+	@DisplayName("Empty JSON")
+	void blankJson(){
+		assertNotNull(FilterLanguages.readJSON());
+	}
+	/*@Test
+	@DisplayName("JSON input is correct")
+	void arrayTest() throws IOException {
+		ObjectMapper tweetMapper = new ObjectMapper();
+		List<CrawlerOutputObject> tweetObjects = null;
+		tweetObjects = tweetMapper.readValue(new File("output_twitter.json"), new TypeReference<List<CrawlerOutputObject>>() {
+		});
+		assertArrayEquals(tweetObjects,FilterLanguages.readJSON());
+	}*/
 	@Test
 	void contextLoads() {
 	}
