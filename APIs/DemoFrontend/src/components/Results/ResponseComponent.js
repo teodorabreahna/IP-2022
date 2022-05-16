@@ -77,7 +77,7 @@ class ResponseComponent extends React.Component {
             "pere"
             ],
 
-            "chartPie": "chart?c={type: 'pie', data:[labels: ['mere', 'pere'], datasets: [{ data:[3,3]}]}}",
+            "chartPie": "chart?c={type: 'pie', data: {labels: ['mere', 'pere'], datasets: [{ data:[3,3]}]}}",
             "chartBar": "chart?c={type: 'bar', data: {labels: ['Nouns', 'Adjectives', 'Verbs'], datasets:[{label: 'mere', data:[2,0,1]},{label:'pere', data:[2,0,1]}]}}"
 
             }
@@ -107,7 +107,7 @@ class ResponseComponent extends React.Component {
                              <h2>First concept chart:</h2>
                          </div>
                         <div className='chart'>
-                            {this.resultObject.chart1}
+                            <img src = {`https://quickchart.io/${this.resultObject.chart1}`}/>
                         </div>
 
                     </div>
@@ -130,8 +130,8 @@ class ResponseComponent extends React.Component {
                              <h2>Second concept chart:</h2>
                          </div>
 
-                        <div className='chart'>  
-                            https://quickchart.io/{this.resultObject.chart2};
+                        <div className='chart'>
+                            <img src = {`https://quickchart.io/${this.resultObject.chart2}`}/>
                         </div>
                     </div>
                 </div>
@@ -160,14 +160,14 @@ class ResponseComponent extends React.Component {
                     <h2>ChartPie:</h2>
                 </div>
                 <div className='common'>
-                    https://quickchart.io/{this.resultObject.chartPie};
+                    <img src = {`https://quickchart.io/${this.resultObject.chartPie}`}/>
                 </div>
 
                 <div className='text-info'>
                     <h2>ChartBar:</h2>
                 </div>
                 <div className='common'>
-                    https://quickchart.io/{this.resultObject.chartBar};
+                    <img src = {`https://quickchart.io/${this.resultObject.chartBar}`}/>
                 </div>
                 <br />
                 <br />
