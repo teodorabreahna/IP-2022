@@ -107,7 +107,7 @@ class ResponseComponent extends React.Component {
                              <h2>First concept chart:</h2>
                          </div>
                         <div className='chart'>
-                            <img src = {`https://quickchart.io/${this.resultObject.chart1}`}/>
+                            <img src = {`https://quickchart.io/${this.resultObject.chart1}`} alt = "Chart Missing"/>
                         </div>
 
                     </div>
@@ -131,7 +131,7 @@ class ResponseComponent extends React.Component {
                          </div>
 
                         <div className='chart'>
-                            <img src = {`https://quickchart.io/${this.resultObject.chart2}`}/>
+                            <img src = {`https://quickchart.io/${this.resultObject.chart2}`} alt = "Chart Missing"/>
                         </div>
                     </div>
                 </div>
@@ -160,14 +160,14 @@ class ResponseComponent extends React.Component {
                     <h2>ChartPie:</h2>
                 </div>
                 <div className='common'>
-                    <img src = {`https://quickchart.io/${this.resultObject.chartPie}`}/>
+                    <img src = {`https://quickchart.io/${this.resultObject.chartPie}`} alt = "Chart Missing"/>
                 </div>
 
                 <div className='text-info'>
                     <h2>ChartBar:</h2>
                 </div>
                 <div className='common'>
-                    <img src = {`https://quickchart.io/${this.resultObject.chartBar}`}/>
+                    <img src = {`https://quickchart.io/${this.resultObject.chartBar}`} alt = "Chart Missing"/>
                 </div>
                 <br />
                 <br />
