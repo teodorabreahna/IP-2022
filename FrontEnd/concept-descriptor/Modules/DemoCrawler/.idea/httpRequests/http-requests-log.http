@@ -1,0 +1,8 @@
+GET http://localhost:8090/crawl/{{concept1}}/{{concept2}}
+
+###
+
+GET http://localhost:8090/crawl/{{concept1}}/{{concept2}}
+
+###
+

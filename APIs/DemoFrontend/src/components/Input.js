@@ -8,19 +8,20 @@ function Input() {
     const conceptHandler = (e) => {
 
         e.preventDefault();
+        document.getElementById('root').blur();
         navigate("/results", { state: { firstConcept: concept1, secondConcept: concept2 } });
-        console.log("HELLO");
+
     }
 
     const onInputChange = (event) => {
         switch (event.target.id) {
             case "concept1":
                 concept1 = event.target.value;
-                console.log(concept1);
+
                 break;
             case "concept2":
                 concept2 = event.target.value;
-                console.log(concept2);
+            
                 break;
             default: console.log("Input ID not found");
         }

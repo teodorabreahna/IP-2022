@@ -2,4 +2,6 @@
 @import "./homeStyle.css";
 @import "./aboutStyle.css";
 @import "./inputStyle.css";
-@import "./responseStyle.css"
+@import "./responseStyle.css";
+@import "./errorModalStyle.css";
+@import "./loadingScreen.css";
