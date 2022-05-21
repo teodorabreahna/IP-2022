@@ -2,6 +2,7 @@ package IPStatisticsDemo.DemoStatistics.Services;
 
 import IPStatisticsDemo.DemoStatistics.models.StatisticsInputObject;
 
+import java.io.IOException;
 import java.util.*;
 
 import static java.util.stream.Collectors.*;
@@ -147,5 +148,36 @@ public class Concept {
             }
         }
         return diff;
+    }
+    public List<String> commonAntonyms(Set<String> ant1,Set<String> ant2){
+        List<String> antonyms=new ArrayList<>();
+        for (String it1:ant1) {
+            for (String it2:ant2) {
+                if(it1.equals(it2)){
+                    antonyms.add(it1);
+                    break;
+                }
+            }
+        }
+
+        List<String> result=new ArrayList<>();
+        if(!antonyms.isEmpty()){
+            for (String it:antonyms) {
+                try {
+                    Set<String> itAntonyms=new DictionaryAccessPoint().getAntonyms(it);
+                    int nrAntonyms=0;
+                    for(String itAnt:itAntonyms){
+                        if(nrAntonyms>=3){
+                            break;
+                        }
+                        result.add(itAnt);
+                        nrAntonyms++;
+                    }
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
+        return result;
     }
 }

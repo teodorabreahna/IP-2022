@@ -26,7 +26,7 @@ public class StatisticsService {
         }
         return hs;
     }
-
+/*
     public String setPieChart(StatisticsInputObject info1, StatisticsInputObject info2){
         //  chart?c={type:'pie',data:{labels:['Concept1','Concept2'], datasets:[{data:[40,60]}]}}
         String relevant1;
@@ -54,8 +54,8 @@ public class StatisticsService {
         relevant1 = relevant1 + finalList1.size() + "," + finalList2.size() + "]}]}}";
 
         return relevant1;
-    }
-
+    }*/
+/*
     public String setBarChart(StatisticsInputObject info1, StatisticsInputObject info2) {
         //  chart?c={type:'bar',data:{labels:['Nouns','Adjectives', 'Verbs'], datasets:[{label:'Concept1',data:[50,60,70]},{label:'Concept2',data:[100,200,300]}]}}
         while (info1.getNouns().remove("")) {}
@@ -78,25 +78,26 @@ public class StatisticsService {
         relevant2 = relevant2 + "]}]}}";
 
         return relevant2;
+    }*/
+
+    public List<String> textProcessing(String text){
+        String[] splitText=text.split("[, ?.@(){}:;'\"]+");
+        List<String> finalList1 = new ArrayList<>();
+        for(int i=0;i<splitText.length;i++){
+            if(!splitText[i].equals("the") && !splitText[i].equals("in")){
+                finalList1.add(splitText[i]);
+            }
+        }
+        return finalList1;
     }
 
     private StatisticsOutputObject doSomeStuff(StatisticsInputObject info1, StatisticsInputObject info2)
     {
         //prelucrati si apelati api-urile etc
 
-        List<String> finalList1 = new ArrayList<>();
-        finalList1.addAll(info1.getAdjectives());
-        finalList1.addAll(info1.getNouns());
-        finalList1.addAll(info1.getVerbs());
-        while (finalList1.remove("")) {
-        }
+        List<String> finalList1 = textProcessing(info1.getText());
 
-        List<String> finalList2 = new ArrayList<>();
-        finalList2.addAll(info2.getAdjectives());
-        finalList2.addAll(info2.getNouns());
-        finalList2.addAll(info2.getVerbs());
-        while (finalList2.remove("")) {
-        }
+        List<String> finalList2 = textProcessing(info2.getText());
 
         LinkedHashMap<String, Integer> hm1 = frequency(finalList1);
         LinkedHashMap<String, Integer> hm2 = frequency(finalList2);
@@ -116,14 +117,6 @@ public class StatisticsService {
             e.printStackTrace();
         }
 
-        List<String> similarities = concept1.commonSynonyms(concept1.getConcept(),concept1Sin,concept2.getConcept(),concept2Sin);
-        List<String> commonWords = concept1.similarities(concept2);
-        int nr=0;
-        while(similarities.size()<20 && nr<commonWords.size()){
-            similarities.add(commonWords.get(nr));
-            nr++;
-        }
-
         Set<String> concept1Antonyms= null;
         Set<String> concept2Antonyms= null;
         try {
@@ -131,6 +124,20 @@ public class StatisticsService {
             concept2Antonyms = new DictionaryAccessPoint().getAntonyms(concept2.getConcept());
         } catch (IOException e) {
             e.printStackTrace();
+        }
+
+        List<String> similarities = concept1.commonSynonyms(concept1.getConcept(),concept1Sin,concept2.getConcept(),concept2Sin);
+        List<String> similaritiesBasedOnAntonyms=concept1.commonAntonyms(concept1Antonyms,concept2Antonyms);
+        int nr1=0;
+        while(similarities.size()<20 && nr1<similaritiesBasedOnAntonyms.size()){
+            similarities.add(similaritiesBasedOnAntonyms.get(nr1));
+            nr1++;
+        }
+        List<String> commonWords = concept1.similarities(concept2);
+        int nr=0;
+        while(similarities.size()<20 && nr<commonWords.size()){
+            similarities.add(commonWords.get(nr));
+            nr++;
         }
 
         List<String> diff1 = concept1.diffBetweenSinAndAnt(concept1.getConcept(),concept1Sin,concept2Antonyms);
@@ -165,10 +172,12 @@ public class StatisticsService {
         //String pieChart="chart?c={type:'pie',data:{labels:['Concept1','Concept2'], datasets:[{data:[40,60]}]}}";
         //String barChart="chart?c={type:'bar',data:{labels:['Nouns','Adjectives', 'Verbs'], datasets:[{label:'Concept1',data:[50,60,70]},{label:'Concept2',data:[100,200,300]}]}}";
 
-        String pieChart = setPieChart(info1, info2);
+        /*String pieChart = setPieChart(info1, info2);
         String barChart = setBarChart(info1, info2);
-        StatisticsOutputObject statisticsOutputObject = new StatisticsOutputObject(info1.getTopic(), def1, concept1.setRelevant(), info2.getTopic(),def2, concept2.setRelevant(), similarities, diff1, diff2,pieChart,barChart);
+        StatisticsOutputObject statisticsOutputObject = new StatisticsOutputObject(info1.getTopic(), def1, concept1.setRelevant(), info2.getTopic(),def2, concept2.setRelevant(), similarities, diff1, diff2,pieChart,barChart);*/
         //StatisticsOutputObject statisticsOutputObject = new StatisticsOutputObject(info1.getTopic(), "definitie 1", "chart?bkg=white&c={ type: 'bar', data: { labels: ['dog', 'man', 'woman', 'hello', 'dog'], datasets: [{ label: 'Users', data: [4, 3, 1, 1, 4] }] }}", info2.getTopic(),"definitie 2","chart?bkg=white&c={ type: 'bar', data: { labels: ['woman', 'rain', 'sun', 'man', 'woman'], datasets: [{ label: 'Users', data: [4, 2, 1, 1, 4] }] }}", similarities, diff1, diff2);
+
+        StatisticsOutputObject statisticsOutputObject = new StatisticsOutputObject(info1.getTopic(), def1, concept1.setRelevant(), info2.getTopic(),def2, concept2.setRelevant(), similarities, diff1, diff2);
         return statisticsOutputObject;
     }
 }

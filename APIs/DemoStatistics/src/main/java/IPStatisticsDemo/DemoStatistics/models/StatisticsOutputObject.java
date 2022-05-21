@@ -22,6 +22,6 @@ public class StatisticsOutputObject {
     List<String> intersect;     //asemanarile dintre cele doua concepte
     List<String> diferit1;      //chestii specifice primului concept
     List<String> diferit2;
-    String chartPie;        //diagrama comuna
-    String chartBar;        //diagrama comuna
+    //String chartPie;        //diagrama comuna
+    //String chartBar;        //diagrama comuna
 }
