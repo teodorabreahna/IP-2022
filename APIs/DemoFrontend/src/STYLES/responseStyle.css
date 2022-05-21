@@ -75,13 +75,30 @@ body{
 }
 
 .chart{
-    font-size: 180%;
-    max-width: 50%;
+    max-width: 70%;
+    height: 50%;
     border:2px solid #F26655;
     box-shadow: 5px 10px 8px #2c2a2a;
     background-color: #F26655;
     border-radius: 15px;
 }
+
+.chart2{
+    max-width: 50%;
+    height: 50%;
+    border:2px solid #F26655;
+    box-shadow: 5px 10px 8px #2c2a2a;
+    background-color: #F26655;
+    border-radius: 15px;
+}
+
+.info{
+    max-width: 30rem;
+    height: 25rem;
+    overflow: hidden;
+}
+
+
 
 .footer{
     height: 10vh;
@@ -94,4 +111,22 @@ body{
     .Concept{
         margin-top: 1%;
     }
+    .chart{
+        max-width: 27rem;
+    }
+
+    .chart2{
+        max-width: 27rem;
+    }
+  }
+
+
+  @media only screen and (max-width: 450px) {
+      .chart{
+             max-width: 15rem;
+        }
+
+      .chart2{
+            max-width: 15rem;
+        }
   }
