@@ -116,14 +116,6 @@ public class StatisticsService {
             e.printStackTrace();
         }
 
-        List<String> similarities = concept1.commonSynonyms(concept1.getConcept(),concept1Sin,concept2.getConcept(),concept2Sin);
-        List<String> commonWords = concept1.similarities(concept2);
-        int nr=0;
-        while(similarities.size()<20 && nr<commonWords.size()){
-            similarities.add(commonWords.get(nr));
-            nr++;
-        }
-
         Set<String> concept1Antonyms= null;
         Set<String> concept2Antonyms= null;
         try {
@@ -131,6 +123,20 @@ public class StatisticsService {
             concept2Antonyms = new DictionaryAccessPoint().getAntonyms(concept2.getConcept());
         } catch (IOException e) {
             e.printStackTrace();
+        }
+
+        List<String> similarities = concept1.commonSynonyms(concept1.getConcept(),concept1Sin,concept2.getConcept(),concept2Sin);
+        List<String> similaritiesBasedOnAntonyms=concept1.commonAntonyms(concept1Antonyms,concept2Antonyms);
+        int nr1=0;
+        while(similarities.size()<20 && nr1<similaritiesBasedOnAntonyms.size()){
+            similarities.add(similaritiesBasedOnAntonyms.get(nr1));
+            nr1++;
+        }
+        List<String> commonWords = concept1.similarities(concept2);
+        int nr=0;
+        while(similarities.size()<20 && nr<commonWords.size()){
+            similarities.add(commonWords.get(nr));
+            nr++;
         }
 
         List<String> diff1 = concept1.diffBetweenSinAndAnt(concept1.getConcept(),concept1Sin,concept2Antonyms);
