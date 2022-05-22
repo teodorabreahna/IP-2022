@@ -121,7 +121,7 @@ class ResponseComponent extends React.Component {
                         </div>
 
                         <div className='Concept'>
-                            {this.props.secondConcept};
+                            {this.props.firstConcept}
                         </div>
                         <div className='text-info'>
                              <h2>First concept definition:</h2>
@@ -143,7 +143,7 @@ class ResponseComponent extends React.Component {
                             <h2>Second concept:</h2>
                         </div>
                         <div className='Concept'>
-                            {this.resultObject.concept2}
+                            {this.props.secondConcept}
                         </div>
                         <div className='text-info'>
                              <h2>Second concept definition:</h2>
