@@ -32,7 +32,7 @@ public class CrawlerService {
         } catch (IOException e) {
             e.printStackTrace();
         }
-          // FilterLanguages.filterJSON(); // language filter, comment to remove.
+           FilterLanguages.filterJSON(); // language filter, comment to remove.
 
         try{
 
