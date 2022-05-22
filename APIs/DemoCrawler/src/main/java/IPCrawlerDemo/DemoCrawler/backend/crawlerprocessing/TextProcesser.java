@@ -2,7 +2,6 @@ package IPCrawlerDemo.DemoCrawler.backend.crawlerprocessing;
 
 import IPCrawlerDemo.DemoCrawler.backend.twittercollect.model.FinalOpt;
 import IPCrawlerDemo.DemoCrawler.backend.twittercollect.model.OutputObj;
-import IPCrawlerDemo.DemoCrawler.models.FilterOutputObject;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import opennlp.tools.postag.POSModel;
 import opennlp.tools.postag.POSTaggerME;
@@ -14,12 +13,11 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 
 public class TextProcesser {
-    public FinalOpt process(String[] text, String topic) {
+    public OutputObj process(String[] text, String topic) {
         ObjectMapper mapper = new ObjectMapper();
         FinalOpt opt = new FinalOpt();
         try {
@@ -68,14 +66,9 @@ public class TextProcesser {
                     case "JJ" : adjectives.add(s);
                 }
             }
-            OutputObj nounsObj = new OutputObj(nouns, topic,"nouns");
-            OutputObj adjObj = new OutputObj(adjectives,topic,"adjectives");
-            OutputObj vrbObj = new OutputObj(verbs, topic, "verbs");
-            opt.add(nounsObj);
-            opt.add(adjObj);
-            opt.add(vrbObj);
+            OutputObj outputObj = new OutputObj(nouns,adjectives,verbs,topic);
             mapper.writeValue(new File("pos.json"),opt);
-            return opt;
+            return outputObj;
         } catch (IOException e) {
             e.printStackTrace();
         }

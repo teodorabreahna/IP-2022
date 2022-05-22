@@ -1,13 +1,10 @@
 package IPCrawlerDemo.DemoCrawler.services;
 
 import IPCrawlerDemo.DemoCrawler.backend.crawlerprocessing.TextProcesser;
-import IPCrawlerDemo.DemoCrawler.backend.twittercollect.FilterLanguages;
 import IPCrawlerDemo.DemoCrawler.backend.twittercollect.GetTweet;
-import IPCrawlerDemo.DemoCrawler.backend.twittercollect.model.FinalOpt;
+import IPCrawlerDemo.DemoCrawler.backend.twittercollect.model.OutputObj;
 import IPCrawlerDemo.DemoCrawler.backend.twittercollect.model.TweetObj;
 import IPCrawlerDemo.DemoCrawler.models.CrawlerInputObject;
-import IPCrawlerDemo.DemoCrawler.models.CrawlerOutputObject;
-import IPCrawlerDemo.DemoCrawler.models.FilterOutputObject;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 import java.io.IOException;
@@ -18,12 +15,12 @@ import java.util.List;
 
 public class CrawlerService {
 
-    public FilterOutputObject processInfo(CrawlerInputObject crawlerInputObject) {
+    public List<OutputObj> processInfo(CrawlerInputObject crawlerInputObject) {
 
         return doSomeStuff(crawlerInputObject.getConcept1(), crawlerInputObject.getConcept2());
     }
 
-    private FilterOutputObject doSomeStuff(String concept1, String concept2)
+    private List<OutputObj> doSomeStuff(String concept1, String concept2)
     {
         //prelucrati si apelati api-urile etc
         TextProcesser o= new TextProcesser();
@@ -56,12 +53,12 @@ public class CrawlerService {
                 }
 
             }
-           FinalOpt c1_finalopt = o.process(c1_texts,concept1);
-            FinalOpt c2_finalopt = o.process(c2_texts,concept2);
-          FilterOutputObject a = new FilterOutputObject();
+            OutputObj c1_finalopt = o.process(c1_texts,concept1);
+            OutputObj c2_finalopt = o.process(c2_texts,concept2);
+           List<OutputObj> a = new ArrayList<>();
            a.add(c1_finalopt);
            a.add(c2_finalopt);
-            System.out.println(a.);
+           //System.out.println(a);
            return a;
         }catch (Exception ex) {
             ex.printStackTrace();

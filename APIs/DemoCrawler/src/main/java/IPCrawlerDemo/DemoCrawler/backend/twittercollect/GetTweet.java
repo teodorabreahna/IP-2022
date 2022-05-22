@@ -45,7 +45,7 @@ public class GetTweet {
                     }
                     k++;
 
-                } while ((queries.set(i,queryResults.get(i).nextQuery()))!= null && k<1);
+                } while ((queries.set(i,queryResults.get(i).nextQuery()))!= null && k<3);
                 System.out.println("Done writing output for "+args[i]+" in the JSON file.");
             }
             mapper.writeValue(new File("output_twitter.json"),jsonTweets);
