@@ -30,7 +30,7 @@ function Input() {
     return (
         <div className="im-pr-index2">
             <div className="search-bars">
-                <form onSubmit={conceptHandler}> {/*daca e de schimbat, doar sa fie form si sa arg onSubmit*/}
+                <form onSubmit={conceptHandler} autoComplete="off"> {/*daca e de schimbat, doar sa fie form si sa arg onSubmit*/}
                     <input id="concept1" type="text" className="sb" placeholder="e.g. man" onChange={onInputChange} /><br />
                     <button type="submit" className="submit2">Submit</button>
                     <input id="concept2" type="text" className="sb" placeholder="e.g. woman" onChange={onInputChange} /><br />

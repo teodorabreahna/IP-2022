@@ -7,9 +7,9 @@ import ComponentCaller from '../../services/ComponentCaller'
 import ErrorModal from '../ErrorModal';
 import LoadingScreen from '../LoadingScreen';
 
-const CRAWLER_REST_API_URL = 'http://localhost:5000/crawler';
-const DATA_PROCESSING_REST_API_URL = 'http://localhost:8090/crawl';
-const STATISTICS_REST_API_URL = 'http://localhost:8090/crawl';
+const CRAWLER_REST_API_URL = 'https://crawler-ip.herokuapp.com/crawler';
+const DATA_PROCESSING_REST_API_URL = "https://dataprocessing-ip.herokuapp.com/dataprocessing"
+const STATISTICS_REST_API_URL = 'https://stats-ip.herokuapp.com/stats';
 
 class ResponseComponent extends React.Component {
 
@@ -52,6 +52,7 @@ class ResponseComponent extends React.Component {
             // //-------------------------     END STATISTICS CALL    --------------------------------
 
             this.resultObject = new ResultObject(intermediateData.data);
+           
             this.setState({ jsonData: JSON.stringify(intermediateData.data),isLoaded:true,hasError:false });
         }
         catch (err) {
@@ -65,7 +66,7 @@ class ResponseComponent extends React.Component {
     render() {
         this.state.jsonData !== null ?
 
-        this.resultObject = this.state.jsonData:
+        this.resultObject = JSON.parse(this.state.jsonData):
 
         this.resultObject = new ResultObject(
             { 
@@ -100,7 +101,7 @@ class ResponseComponent extends React.Component {
     
                 }
         );
-
+       
        
         if(this.state.isLoaded === false)
             return <LoadingScreen loadingStatusTexts = {this.state.loadingStatusTexts}/>

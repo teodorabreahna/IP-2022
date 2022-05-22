@@ -5,7 +5,7 @@ function LoginLayout(props) {
   
     let navigate = useNavigate(); 
     const routeChange = () =>{ 
-      let path = `/`; 
+      let path = `/input`; 
       navigate(path);
     }
     console.log(props.jsonData);

@@ -2,7 +2,7 @@
  .frame {
    
     display: flex;
-    height: 100vh;
+    height: 90vh;
     width:100%;
     overflow-x: hidden;
     background: #3f3f3f;
@@ -18,6 +18,8 @@
  .modal {
     overflow-wrap: anywhere;
     overflow-x: hidden;
+    overflow-y: hidden;
+
      flex-direction: column;
      align-items: center;
      align-content:space-between;
