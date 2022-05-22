@@ -1,14 +1,20 @@
 package IPCrawlerDemo.DemoCrawler.backend.twittercollect.model;
 
-public class TweetObj {
-    private String user;
-    private String text;
-    private String topic;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 
-    public TweetObj(String user, String text, String topic) {
-        this.user = user;
-        this.text = text;
-        this.topic = topic;
+@Getter
+@Setter
+@Data
+@AllArgsConstructor
+public class TweetObj {
+    String user;
+     String text;
+    String topic;
+
+    public TweetObj() {
     }
 
     public String getUser() {

@@ -13,7 +13,7 @@ import java.util.List;
 @Data
 @AllArgsConstructor
 public class CrawlerOutputObject {
- //{"user":"username1","text":"ana are mere :(","topic":"mere"}
+    //{"user":"username1","text":"ana are mere :(","topic":"mere"}
     String user;
     String text;
     String topic;

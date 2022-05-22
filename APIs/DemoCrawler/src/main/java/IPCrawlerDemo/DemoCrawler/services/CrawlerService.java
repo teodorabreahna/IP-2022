@@ -1,27 +1,32 @@
 package IPCrawlerDemo.DemoCrawler.services;
 
+import IPCrawlerDemo.DemoCrawler.backend.crawlerprocessing.TextProcesser;
 import IPCrawlerDemo.DemoCrawler.backend.twittercollect.FilterLanguages;
 import IPCrawlerDemo.DemoCrawler.backend.twittercollect.GetTweet;
+import IPCrawlerDemo.DemoCrawler.backend.twittercollect.model.FinalOpt;
+import IPCrawlerDemo.DemoCrawler.backend.twittercollect.model.TweetObj;
 import IPCrawlerDemo.DemoCrawler.models.CrawlerInputObject;
 import IPCrawlerDemo.DemoCrawler.models.CrawlerOutputObject;
+import IPCrawlerDemo.DemoCrawler.models.FilterOutputObject;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 import java.io.IOException;
 import java.nio.file.Paths;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
 public class CrawlerService {
 
-    public List<CrawlerOutputObject> processInfo(CrawlerInputObject crawlerInputObject) {
+    public FilterOutputObject processInfo(CrawlerInputObject crawlerInputObject) {
 
         return doSomeStuff(crawlerInputObject.getConcept1(), crawlerInputObject.getConcept2());
     }
 
-    private List<CrawlerOutputObject> doSomeStuff(String concept1, String concept2)
+    private FilterOutputObject doSomeStuff(String concept1, String concept2)
     {
         //prelucrati si apelati api-urile etc
-
+        TextProcesser o= new TextProcesser();
         String[] inputs = new String[2];
         inputs[0]=concept1;
         inputs[1]=concept2;
@@ -30,11 +35,34 @@ public class CrawlerService {
         } catch (IOException e) {
             e.printStackTrace();
         }
-           // FilterLanguages.filterJSON(); // language filter, comment to remove.
+          // FilterLanguages.filterJSON(); // language filter, comment to remove.
+
         try{
-            System.out.println("Sending back the answer");
+
             ObjectMapper mapper = new ObjectMapper();
-            return Arrays.asList(mapper.readValue(Paths.get("output_twitter.json").toFile(), CrawlerOutputObject[].class));
+            List<TweetObj> finalList=Arrays.asList(mapper.readValue(Paths.get("output_twitter.json").toFile(), TweetObj[].class));
+            String[] c1_texts=new String[2000];
+            String[] c2_texts=new String[2000];
+            int i = 0;
+            int j =0;
+            for(TweetObj obj:finalList)
+            {
+                if(obj.getTopic().equals(concept1)){
+                    c1_texts[i] = obj.getText();
+                                    i++;
+                }else if(obj.getTopic().equals(concept2)){
+                    c2_texts[j] = obj.getText();
+                    j++;
+                }
+
+            }
+           FinalOpt c1_finalopt = o.process(c1_texts,concept1);
+            FinalOpt c2_finalopt = o.process(c2_texts,concept2);
+          FilterOutputObject a = new FilterOutputObject();
+           a.add(c1_finalopt);
+           a.add(c2_finalopt);
+            System.out.println(a.);
+           return a;
         }catch (Exception ex) {
             ex.printStackTrace();
         }

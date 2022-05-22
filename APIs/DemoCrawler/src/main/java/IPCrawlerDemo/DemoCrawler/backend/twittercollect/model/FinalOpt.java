@@ -4,24 +4,24 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class FinalOpt{
-    private List<OutputObj> outputObjs = new ArrayList<>();
+    private List<OutputObj> concepts = new ArrayList<>();
 
     public FinalOpt() {
     }
 
     public FinalOpt(List<OutputObj> outputObjs) {
-        this.outputObjs = outputObjs;
+        this.concepts = outputObjs;
     }
 
     public List<OutputObj> getOutputObjs() {
-        return outputObjs;
+        return concepts;
     }
 
     public void setOutputObjs(List<OutputObj> outputObjs) {
-        this.outputObjs = outputObjs;
+        this.concepts = outputObjs;
     }
 
     public void add(OutputObj o){
-        outputObjs.add(o);
+        concepts.add(o);
     }
 }

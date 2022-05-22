@@ -2,6 +2,7 @@ package IPCrawlerDemo.DemoCrawler.backend.crawlerprocessing;
 
 import IPCrawlerDemo.DemoCrawler.backend.twittercollect.model.FinalOpt;
 import IPCrawlerDemo.DemoCrawler.backend.twittercollect.model.OutputObj;
+import IPCrawlerDemo.DemoCrawler.models.FilterOutputObject;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import opennlp.tools.postag.POSModel;
 import opennlp.tools.postag.POSTaggerME;
@@ -18,12 +19,19 @@ import java.util.List;
 
 
 public class TextProcesser {
-    public void process(String text, String topic) {
+    public FinalOpt process(String[] text, String topic) {
         ObjectMapper mapper = new ObjectMapper();
         FinalOpt opt = new FinalOpt();
         try {
             SimpleTokenizer tokenizer = SimpleTokenizer.INSTANCE;
-            String[] tokens = tokenizer.tokenize(text);
+            String[] tokens={""};
+            for(int i=0;i< text.length;i++) {
+
+                if(text[i]!=null) {
+                    String[] tok = tokenizer.tokenize(text[i]);
+                    tokens = ArrayUtils.addAll(tokens, tok);
+                }
+            }
             InputStream inputStreamPOSTagger = new FileInputStream("en-pos-maxent.bin");
             POSModel posModel = new POSModel(inputStreamPOSTagger);
             POSTaggerME posTagger = new POSTaggerME(posModel);
@@ -38,12 +46,12 @@ public class TextProcesser {
             }
             for(int i =0;i<tokens.length;i++)
             {
-                if(tokens[i].contains(","))
+                if(tokens[i].contains(""))
                 {
                     ArrayUtils.removeElement(tokens, tokens[i]);
                 }
             }
-            System.out.println(Arrays.toString(tokens));
+
             for (String s : tokens) {
                 String[] copy = new String[1];
                 copy[0] = s;
@@ -67,13 +75,15 @@ public class TextProcesser {
             opt.add(adjObj);
             opt.add(vrbObj);
             mapper.writeValue(new File("pos.json"),opt);
+            return opt;
         } catch (IOException e) {
             e.printStackTrace();
         }
+        return null;
     }
 
     public static void main(String[] args) {
         TextProcesser n = new TextProcesser();
-        n.process("In Europe, “rewilding” is aiding the reintroduction of key animal species, including bison. Visitors to the forests and meadows of western Romania are helping to track the new species.", "Romania");
+       // n.process("In Europe, “rewilding” is aiding the reintroduction of key animal species, including bison. Visitors to the forests and meadows of western Romania are helping to track the new species.", "Romania");
     }
 }
