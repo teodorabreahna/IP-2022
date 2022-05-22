@@ -16,8 +16,12 @@ public class StatisticsInputObject {
     /*String topic;
     List<String> nouns;
     List<String> adjectives;
-    List<String> verbs;*/
+    List<String> verbs;
     String user;
     String text;
-    String topic;
+    String topic;*/
+     List<String> nouns;
+     List<String> adj;
+     List<String> verb;
+     String topic;
 }
