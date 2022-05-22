@@ -30,8 +30,9 @@ public class CrawlerService {
         } catch (IOException e) {
             e.printStackTrace();
         }
-            FilterLanguages.filterJSON(); // language filter, comment to remove.
+           // FilterLanguages.filterJSON(); // language filter, comment to remove.
         try{
+            System.out.println("Sending back the answer");
             ObjectMapper mapper = new ObjectMapper();
             return Arrays.asList(mapper.readValue(Paths.get("output_twitter.json").toFile(), CrawlerOutputObject[].class));
         }catch (Exception ex) {

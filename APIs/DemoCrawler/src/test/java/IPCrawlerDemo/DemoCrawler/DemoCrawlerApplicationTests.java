@@ -59,7 +59,8 @@ class DemoCrawlerApplicationTests {
 	void blankJson(){
 		assertNotNull(FilterLanguages.readJSON());
 	}
-	/*@Test
+
+    /*@Test
 	@DisplayName("JSON input is correct")
 	void arrayTest() throws IOException {
 		ObjectMapper tweetMapper = new ObjectMapper();
