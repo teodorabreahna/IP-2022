@@ -76,7 +76,7 @@ body{
 
 .chart{
     max-width: 70%;
-    height: 50%;
+    height: auto;
     border:2px solid #F26655;
     box-shadow: 5px 10px 8px #2c2a2a;
     background-color: #F26655;
@@ -94,7 +94,7 @@ body{
 
 .info{
     max-width: 30rem;
-    height: 25rem;
+    height: auto;
     overflow: hidden;
 }
 
