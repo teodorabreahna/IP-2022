@@ -30,6 +30,11 @@ public class TextProcesser {
                     tokens = ArrayUtils.addAll(tokens, tok);
                 }
             }
+             for(int i=0;i< tokens.length;i++)
+            {
+                tokens[i]=tokens[i].toLowerCase();
+            }
+            
             InputStream inputStreamPOSTagger = new FileInputStream("en-pos-maxent.bin");
             POSModel posModel = new POSModel(inputStreamPOSTagger);
             POSTaggerME posTagger = new POSTaggerME(posModel);
@@ -42,6 +47,7 @@ public class TextProcesser {
             {
                 tokens[i]=tokens[i].replaceAll("[^a-zA-Z0-9]" ,"");
             }
+            
             for(int i =0;i<tokens.length;i++)
             {
                 if(tokens[i].contains(""))
