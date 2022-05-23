@@ -41,6 +41,22 @@ public class CrawlerService {
             List<TweetObj> finalList=Arrays.asList(mapper.readValue(Paths.get("output_twitter.json").toFile(), TweetObj[].class));
             String[] c1_texts=new String[2000];
             String[] c2_texts=new String[2000];
+            for(TweetObj tobj : finalList)
+            {
+                StringBuilder atext= new StringBuilder(tobj.getText());
+                for(int x=0;x<atext.length();x++)
+                {
+                    if(atext.charAt(x)=='@')
+                        while(atext.charAt(x)!=' ') {
+                            atext.deleteCharAt(x);
+                            x++;
+                        }
+                    //System.out.println(atext);
+
+
+                }
+                tobj.setText(String.valueOf(atext));
+            }
             int i = 0;
             int j =0;
             for(TweetObj obj:finalList)
