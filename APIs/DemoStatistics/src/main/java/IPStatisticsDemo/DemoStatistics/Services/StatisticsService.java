@@ -139,14 +139,14 @@ public class StatisticsService {
         info.getVerb().removeIf(s -> (s.length()<3));
 
         //remove verbs
-        info.getVerb().removeIf(s -> (s.equals("have")));
-        info.getVerb().removeIf(s -> (s.equals("has")));
-        info.getVerb().removeIf(s -> (s.equals("were")));
-        info.getVerb().removeIf(s -> (s.equals("was")));
-        info.getVerb().removeIf(s -> (s.equals("would")));
-        info.getVerb().removeIf(s -> (s.equals("will")));
-        info.getVerb().removeIf(s -> (s.equals("could")));
-        info.getVerb().removeIf(s -> (s.equals("can")));
+//        info.getVerb().removeIf(s -> (s.equals("have")));
+//        info.getVerb().removeIf(s -> (s.equals("has")));
+//        info.getVerb().removeIf(s -> (s.equals("were")));
+//        info.getVerb().removeIf(s -> (s.equals("was")));
+//        info.getVerb().removeIf(s -> (s.equals("would")));
+//        info.getVerb().removeIf(s -> (s.equals("will")));
+//        info.getVerb().removeIf(s -> (s.equals("could")));
+//        info.getVerb().removeIf(s -> (s.equals("can")));
 
         finalList.addAll(info.getAdj());
         finalList.addAll(info.getNouns());

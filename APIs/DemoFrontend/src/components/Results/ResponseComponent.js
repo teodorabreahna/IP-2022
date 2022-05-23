@@ -9,7 +9,7 @@ import LoadingScreen from '../LoadingScreen';
 
 const CRAWLER_REST_API_URL = 'https://crawler-ip.herokuapp.com/crawler';
 //const DATA_PROCESSING_REST_API_URL = "https://dataprocessing-ip.herokuapp.com/dataprocessing"
-const STATISTICS_REST_API_URL = 'http://localhost:5000/stats';
+const STATISTICS_REST_API_URL = 'https://stats-ip.herokuapp.com/stats';
 
 class ResponseComponent extends React.Component {
 
@@ -28,11 +28,11 @@ class ResponseComponent extends React.Component {
 
         var intermediateData;
         var loadingStatusTexts = [];
-console.log("concept1",this.props.concept1);
+console.log("concept1",this.props.firstConcept);
 
 
         //-------------------------        CRAWLER CALL     --------------------------------------
-        console.log("object:", ({ concept1 : this.props.concept1, concept2: this.props.concept2 }));
+        console.log("object:", ({ concept1 : this.props.firstConcept, concept2: this.props.secondConcept }));
         try {
             intermediateData = await ComponentCaller.callApi({ concept1: this.props.firstConcept, concept2: this.props.secondConcept }, CRAWLER_REST_API_URL);
             console.log("crawler response:", intermediateData.data);
