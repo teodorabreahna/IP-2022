@@ -69,6 +69,10 @@ public class FilterLanguages {
         }
     }
 
+    public static List<CrawlerOutputObject> getTweetObjects() {
+        return tweetObjects;
+    }
+
     public static void main(String args[]){
         filterJSON();
     }

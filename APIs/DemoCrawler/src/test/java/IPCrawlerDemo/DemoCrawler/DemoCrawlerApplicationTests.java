@@ -27,6 +27,7 @@ class DemoCrawlerApplicationTests {
 	void setUp() {
 		crawler = new CrawlerService();
 		input = new CrawlerInputObject();
+		filter = new FilterLanguages();
 		input.setConcept1("car");
 		input.setConcept2("man");
 	}
@@ -60,6 +61,12 @@ class DemoCrawlerApplicationTests {
 		assertNotNull(FilterLanguages.readJSON());
 	}
 
+	@Test
+	@DisplayName("Filter JSON")
+	void filterJSONTest() {
+		FilterLanguages.filterJSON();
+		assertNotNull(FilterLanguages.getTweetObjects());
+	}
     /*@Test
 	@DisplayName("JSON input is correct")
 	void arrayTest() throws IOException {

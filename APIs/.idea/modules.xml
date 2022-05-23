@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/APIs.iml" filepath="$PROJECT_DIR$/.idea/APIs.iml" />
+      <module fileurl="file://$PROJECT_DIR$/DemoCrawler/java-getting-started.iml" filepath="$PROJECT_DIR$/DemoCrawler/java-getting-started.iml" />
+      <module fileurl="file://$PROJECT_DIR$/DemoStatistics/java-getting-started (1).iml" filepath="$PROJECT_DIR$/DemoStatistics/java-getting-started (1).iml" />
+      <module fileurl="file://$PROJECT_DIR$/DemoDataProcessing/java-getting-started (2).iml" filepath="$PROJECT_DIR$/DemoDataProcessing/java-getting-started (2).iml" />
+    </modules>
+  </component>
+</project>
