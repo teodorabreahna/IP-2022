@@ -8,8 +8,8 @@ import ErrorModal from '../ErrorModal';
 import LoadingScreen from '../LoadingScreen';
 
 const CRAWLER_REST_API_URL = 'https://crawler-ip.herokuapp.com/crawler';
-const DATA_PROCESSING_REST_API_URL = "https://dataprocessing-ip.herokuapp.com/dataprocessing"
-const STATISTICS_REST_API_URL = 'https://stats-ip.herokuapp.com/stats';
+//const DATA_PROCESSING_REST_API_URL = "https://dataprocessing-ip.herokuapp.com/dataprocessing"
+const STATISTICS_REST_API_URL = 'http://localhost:5000/stats';
 
 class ResponseComponent extends React.Component {
 
@@ -28,23 +28,28 @@ class ResponseComponent extends React.Component {
 
         var intermediateData;
         var loadingStatusTexts = [];
+console.log("concept1",this.props.concept1);
+
 
         //-------------------------        CRAWLER CALL     --------------------------------------
+        console.log("object:", ({ concept1 : this.props.concept1, concept2: this.props.concept2 }));
         try {
-            intermediateData = await ComponentCaller.callApi({ concept1: this.props.concept1, concept2: this.props.concept2 }, CRAWLER_REST_API_URL);
+            intermediateData = await ComponentCaller.callApi({ concept1: this.props.firstConcept, concept2: this.props.secondConcept }, CRAWLER_REST_API_URL);
             console.log("crawler response:", intermediateData.data);
+            console.log("data header", intermediateData );
             loadingStatusTexts.push("Crawler responded successfully.");
          
             this.setState({loadingStatusTexts: loadingStatusTexts});
 
-            // //-------------------------         DATA PROCESSING CALL    --------------------------------
-             intermediateData = await ComponentCaller.callApi(intermediateData.data, DATA_PROCESSING_REST_API_URL);
-            console.log("data processing response:", intermediateData.data);
-            loadingStatusTexts.push("Data processing responded successfully.");
-            this.setState({loadingStatusTexts: loadingStatusTexts});
+            // // //-------------------------         DATA PROCESSING CALL    --------------------------------
+            //  intermediateData = await ComponentCaller.callApi(intermediateData.data, DATA_PROCESSING_REST_API_URL);
+            // console.log("data processing response:", intermediateData.data);
+            // loadingStatusTexts.push("Data processing responded successfully.");
+            // this.setState({loadingStatusTexts: loadingStatusTexts});
             // //-------------------------     END  DATA PROCESSING CALL    --------------------------------
 
             // //-------------------------         STATISTICS CALL    --------------------------------
+            console.log("calling stats");
             intermediateData = await ComponentCaller.callApi(intermediateData.data, STATISTICS_REST_API_URL);
             console.log("statistics response:", intermediateData.data);
             loadingStatusTexts.push("Statistics responded successfully.");
