@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 function NavBar() {
     return (
+       <section class="section1"> 
         <nav className="navbar">
             <div className="title">
                 <img src="iconita.svg" alt="LOGO" />
@@ -12,6 +13,7 @@ function NavBar() {
                 <li><Link to="/">HOME</Link></li>
             </ul>
         </nav>
+       </section> 
     );
 }
 

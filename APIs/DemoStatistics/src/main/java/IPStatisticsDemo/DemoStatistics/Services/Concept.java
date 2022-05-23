@@ -48,9 +48,9 @@ public class Concept {
         relevant = new String();
         String s = new String();
         relevant = relevant +"chart?bkg=white&c={ type: 'bar', data: { labels: [";
-        while (contor<=4){
+        while (contor<=10){
             for(Map.Entry<String,Integer> entry: topWords.entrySet()){
-                if(contor<=3){
+                if(contor<=9){
                     relevant = relevant +"'"+entry.getKey()+"', ";
                     s=s+entry.getValue()+", ";
                 }
