@@ -132,7 +132,7 @@ console.log("concept1",this.props.firstConcept);
                              <h2>First concept definition:</h2>
                          </div>
                         <div className='info'>
-                            {this.resultObject.def1};
+                            {this.resultObject.def1}
                         </div>
                         <div className='text-info'>
                              <h2>First concept chart:</h2>
@@ -170,21 +170,21 @@ console.log("concept1",this.props.firstConcept);
                     <h2>Intersected:</h2>
                 </div>
                 <div className='common'>
-                    {this.resultObject.intersect}
+                    {this.resultObject.intersect.map(info => <div key = {info}> {info} </div>)}
                 </div>
 
                 <div className='text-info'>
                     <h2>Diferit1:</h2>
                 </div>
                 <div className='common'>
-                    {this.resultObject.diferit1}
+                {this.resultObject.diferit1.map(info => <div key = {info}> {info} </div>)}
                 </div>
 
                 <div className='text-info'>
                     <h2>Diferit2:</h2>
                 </div>
                 <div className='common'>
-                    {this.resultObject.diferit2}
+                {this.resultObject.diferit2.map(info => <div key = {info}> {info} </div>)}
                 </div>
 
                 <div className='text-info'>
