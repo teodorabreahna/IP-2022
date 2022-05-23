@@ -14,6 +14,9 @@ import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.Scanner;
 
 /**
  *
@@ -24,12 +27,38 @@ public class DictionaryAccessPoint {
     //This is the base url for searches. If you want to use diffrent lanuages change en to other language code.
     private final String baseURLString = "https://api.dictionaryapi.dev/api/v2/entries/en/";
 
+    private static List<String> words = new ArrayList<>();
+
     /**
      * This is the constructor for the class.
      * TODO: modify so it returns error if free dictionary services don't work.
      *
      */
-    public DictionaryAccessPoint() {
+    public DictionaryAccessPoint()
+    {
+
+        importWords();
+
+    }
+
+    public void importWords()
+    {
+
+        if(words.isEmpty()) {
+            try {
+                File myObj = new File("E:\\University\\_My Scripts\\SoftEn\\_Project\\APIs\\DemoStatistics\\src\\main\\java\\IPStatisticsDemo\\DemoStatistics\\Services\\words_alpha.txt");
+                Scanner myReader = new Scanner(myObj);
+                while (myReader.hasNextLine()) {
+                    words.add(myReader.nextLine());
+                }
+                myReader.close();
+            } catch (FileNotFoundException e) {
+                System.out.println("An error occurred.");
+                e.printStackTrace();
+            }
+        }
+
+
     }
 
     /**
@@ -185,6 +214,32 @@ public class DictionaryAccessPoint {
         }
 
         return tempSet;
+
+    }
+
+    public Boolean isWord(String word)
+    {
+
+        int pivot = words.size()/2;
+        int folds = 2;
+
+        if (!words.isEmpty())
+        {
+
+            return (words.indexOf(word) != -1)? true : false;
+
+        }
+
+        return false;
+
+    }
+
+    public static void main(String[] args)
+    {
+
+        DictionaryAccessPoint dic = new DictionaryAccessPoint();
+
+        System.out.println(dic.isWord("msn"));
 
     }
 
