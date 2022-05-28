@@ -3,6 +3,17 @@
     padding: 0;
     box-sizing: border-box;
 }
+body{
+    height: 100%;
+}
+.section1{
+    width: 100%;
+    background-color: #56C6D4;
+}
+.section2{
+    background-color: #56C6D4;
+    /*background-size: cover;*/
+}
 /*-------------------------------------------------------BARA DE NAVIGARE-----------------------------------------------------------*/
 
 .navbar {
