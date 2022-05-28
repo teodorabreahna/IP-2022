@@ -1,8 +1,12 @@
 package IPCrawlerDemo.DemoCrawler;
 
 import IPCrawlerDemo.DemoCrawler.backend.twittercollect.FilterLanguages;
+import IPCrawlerDemo.DemoCrawler.backend.twittercollect.GetTweet;
 import IPCrawlerDemo.DemoCrawler.models.CrawlerInputObject;
+import IPCrawlerDemo.DemoCrawler.models.CrawlerOutputObject;
 import IPCrawlerDemo.DemoCrawler.services.CrawlerService;
+import com.fasterxml.jackson.core.type.TypeReference;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -11,8 +15,11 @@ import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.ResponseStatus;
 
-import static org.junit.jupiter.api.Assertions.assertNotEquals;
-import static org.junit.jupiter.api.Assertions.assertNotNull;
+import java.io.File;
+import java.io.IOException;
+import java.util.List;
+
+import static org.junit.jupiter.api.Assertions.*;
 
 @SpringBootTest
 @ResponseBody
@@ -22,6 +29,8 @@ class DemoCrawlerApplicationTests {
 	CrawlerService crawler;
 	CrawlerInputObject input;
 	FilterLanguages filter;
+
+	GetTweet tweet;
 
 	@BeforeEach
 	void setUp() {
@@ -78,6 +87,46 @@ class DemoCrawlerApplicationTests {
 	}*/
 	@Test
 	void contextLoads() {
+	}
+
+	@Test
+	@DisplayName("FilterLanguages")
+	void filterLanguagesTest(){
+		//String content = String.valueOf(new GetTweet());
+		//System.out.println("The length is: " + content.length());
+		List<CrawlerOutputObject> beforeFilterObjects = null;
+		List<CrawlerOutputObject> afterFilterObjects = null;
+
+		try{
+			ObjectMapper beforeFilter = new ObjectMapper();
+			beforeFilterObjects = beforeFilter.readValue(new File("output_twitter.json"), new TypeReference<List<CrawlerOutputObject>>() {
+			});
+			FilterLanguages.filterJSON();
+
+			ObjectMapper afterFilter = new ObjectMapper();
+			afterFilterObjects = afterFilter.readValue(new File("output_twitter.json"), new TypeReference<List<CrawlerOutputObject>>() {
+			});
+		}
+		catch(IOException e){
+			e.printStackTrace();
+		}
+
+		//System.out.println("size before is " + beforeFilterObjects.size());
+		//System.out.println("size after is " + afterFilterObjects.size());
+
+		//assertNotEquals(beforeFilterObjects.size(), afterFilterObjects.size());
+		assertEquals(beforeFilterObjects.size(), afterFilterObjects.size());
+
+
+
+
+
+	}
+
+	@Test
+	@DisplayName("TextProcessor")
+	void textProcessorTest(){
+
 	}
 
 }
