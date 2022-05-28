@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 function Home() {
     return (
-       <section class="section2">
+       <section className="section2">
         <div className="im-pr">
             <img src="principal1.jpg" alt="errrstdsrsddsrrsttddrdsdrssddsdrrssrrssrddsssrdssrd" />
             <div className="im-pr2">
