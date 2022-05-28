@@ -2,7 +2,7 @@ import React from "react";
 
 function About() {
     return (
-       <section classname="section2"> 
+       <section className="section2"> 
         <div className="im-pr-about">
 
             <div className="info-about">
