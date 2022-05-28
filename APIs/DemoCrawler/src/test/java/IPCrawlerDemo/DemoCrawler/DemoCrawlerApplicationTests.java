@@ -17,6 +17,7 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -125,8 +126,41 @@ class DemoCrawlerApplicationTests {
 
 	@Test
 	@DisplayName("TextProcessor")
-	void textProcessorTest(){
+	void textProcessorTest()
+	{
+		/*
+			// Define the topic.
+			String topic = "topic";
 
+			// Declare variables for the expected output.
+			List<String> correctNouns = new ArrayList<>();
+			List<String> correctVerbs = new ArrayList<>();
+			List<String> correctAdjectives = new ArrayList<>();
+
+			// Define the expected output.
+			correctNouns.add("thisNN");
+			correctNouns.add("isNNP");
+			correctNouns.add("oneNN");
+
+			correctVerbs.add("uglyVB");
+			correctVerbs.add("textVBD");
+			correctVerbs.add("andVBZ");
+			correctVerbs.add("bigVBG");
+			correctVerbs.add("longVBN");
+			correctVerbs.add("sameVB");
+
+			correctAdjectives.add("textJJ");
+			correctAdjectives.add("forJJ");
+
+			// Create the object for the expected output.
+			OutputObj expectedOutput = new OutputObj(correctNouns, correctAdjectives, correctVerbs, topic);
+
+			// Test the function.
+			TextProcesser textProcessor;
+			OutputObj realOutput = textProcessor.process(["thisNN isNNP uglyVB textVBD andVBZ bigVBG longVBN textJJ", "sameVB forJJ thisJJ oneNN"], "topic");
+
+			// Make the assert.
+			assertEquals(expectedOutput, realOutput);
+		*/
 	}
-
 }
