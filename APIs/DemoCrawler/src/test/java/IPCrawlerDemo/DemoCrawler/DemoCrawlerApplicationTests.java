@@ -173,26 +173,7 @@ class DemoCrawlerApplicationTests {
 	@DisplayName("DeleteUsers")
 	void deleteUsersTest() throws IOException
 	{
-		GetTweet.main(new String[]{"man","woman"});
-		List<CrawlerOutputObject> beforeFilterObjects = null;
-		List<CrawlerOutputObject> afterFilterObjects = null;
-
-		try{
-			ObjectMapper beforeFilter = new ObjectMapper();
-			beforeFilterObjects = beforeFilter.readValue(new File("output_twitter.json"), new TypeReference<List<CrawlerOutputObject>>() {
-			});
-			deleteUser();
-
-			ObjectMapper afterFilter = new ObjectMapper();
-			afterFilterObjects = afterFilter.readValue(new File("output_twitter.json"), new TypeReference<List<CrawlerOutputObject>>() {
-			});
-		}
-		catch(IOException e){
-			e.printStackTrace();
-		}
-
-		//assertNotEquals(beforeFilterObjects.size(), afterFilterObjects.size());
-		assertEquals(beforeFilterObjects.size(), afterFilterObjects.size());
+		assertDoesNotThrow(() -> deleteUser());
 	}
 
 }
