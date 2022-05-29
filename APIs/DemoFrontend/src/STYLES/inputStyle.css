@@ -125,6 +125,10 @@
         max-width: 80%;
     }
 
+    .search-bars form{
+        background-color: #F26655;
+    }
+
     .submit{
         margin-left: auto;
         margin-right: auto;
