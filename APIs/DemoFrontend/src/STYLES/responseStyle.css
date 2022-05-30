@@ -118,6 +118,9 @@ body{
     .chart2{
         max-width: 27rem;
     }
+    .common{
+        max-width: 23rem;
+    }
   }
 
 
@@ -127,6 +130,9 @@ body{
         }
 
       .chart2{
+            max-width: 15rem;
+        }
+        .common{
             max-width: 15rem;
         }
   }
