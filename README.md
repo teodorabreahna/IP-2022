@@ -11,7 +11,7 @@ Each team created a Trello Board for managing their tasks:
 4. Statistics: https://trello.com/b/NbELmNg3/ip-statistics
 
 Link to Heroku: 
-1. Web Interface: frontend-ip.herokuapp.com
-2. Crawler: crawler-ip.herokuapp.com
-3. Statistics: stats-ip.herokuapp.com
-4. Data Processing: dataprocessing-ip.herokuapp.com
+1. Web Interface: https://frontend-ip.herokuapp.com
+2. Crawler: https://crawler-ip.herokuapp.com
+3. Statistics: https://stats-ip.herokuapp.com
+4. Data Processing: https://dataprocessing-ip.herokuapp.com
