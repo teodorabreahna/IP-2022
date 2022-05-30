@@ -94,7 +94,7 @@ class DemoCrawlerApplicationTests {
 	}
 
 	@Test
-	@DisplayName("FilterLanguages")
+	@DisplayName("Checking files before and after filtering")
 	void filterLanguagesTest() throws IOException {
 		//String content = String.valueOf(new GetTweet());
 		//System.out.println("The length is: " + content.length());
@@ -163,14 +163,14 @@ class DemoCrawlerApplicationTests {
 	}
 
 	@Test
-	@DisplayName("GetTweet")
+	@DisplayName("GetTweet not throwing exceptions")
 	void getTweetTest() throws IOException
 	{
 		assertDoesNotThrow(() -> GetTweet.main(new String[]{"man","woman"}));
 	}
 
 	@Test
-	@DisplayName("DeleteUsers")
+	@DisplayName("DeleteUsers not throwing exceptions")
 	void deleteUsersTest() throws IOException
 	{
 		assertDoesNotThrow(() -> deleteUser());
