@@ -1,7 +1,9 @@
 package IPCrawlerDemo.DemoCrawler;
 
+import IPCrawlerDemo.DemoCrawler.backend.crawlerprocessing.TextProcesser;
 import IPCrawlerDemo.DemoCrawler.backend.twittercollect.FilterLanguages;
 import IPCrawlerDemo.DemoCrawler.backend.twittercollect.GetTweet;
+import IPCrawlerDemo.DemoCrawler.backend.twittercollect.model.OutputObj;
 import IPCrawlerDemo.DemoCrawler.models.CrawlerInputObject;
 import IPCrawlerDemo.DemoCrawler.models.CrawlerOutputObject;
 import IPCrawlerDemo.DemoCrawler.services.CrawlerService;
@@ -20,6 +22,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
+import static IPCrawlerDemo.DemoCrawler.backend.twittercollect.DeleteUsers.deleteUser;
 import static org.junit.jupiter.api.Assertions.*;
 
 @SpringBootTest
@@ -91,10 +94,11 @@ class DemoCrawlerApplicationTests {
 	}
 
 	@Test
-	@DisplayName("FilterLanguages")
-	void filterLanguagesTest(){
+	@DisplayName("Checking files before and after filtering")
+	void filterLanguagesTest() throws IOException {
 		//String content = String.valueOf(new GetTweet());
 		//System.out.println("The length is: " + content.length());
+		GetTweet.main(new String[]{"man","woman"});
 		List<CrawlerOutputObject> beforeFilterObjects = null;
 		List<CrawlerOutputObject> afterFilterObjects = null;
 
@@ -115,20 +119,15 @@ class DemoCrawlerApplicationTests {
 		//System.out.println("size before is " + beforeFilterObjects.size());
 		//System.out.println("size after is " + afterFilterObjects.size());
 
-		//assertNotEquals(beforeFilterObjects.size(), afterFilterObjects.size());
-		assertEquals(beforeFilterObjects.size(), afterFilterObjects.size());
-
-
-
-
-
+		assertNotEquals(beforeFilterObjects.size(), afterFilterObjects.size());
+		//assertEquals(beforeFilterObjects.size(), afterFilterObjects.size());
 	}
 
 	@Test
 	@DisplayName("TextProcessor")
 	void textProcessorTest()
 	{
-		/*
+
 			// Define the topic.
 			String topic = "topic";
 
@@ -156,11 +155,25 @@ class DemoCrawlerApplicationTests {
 			OutputObj expectedOutput = new OutputObj(correctNouns, correctAdjectives, correctVerbs, topic);
 
 			// Test the function.
-			TextProcesser textProcessor;
-			OutputObj realOutput = textProcessor.process(["thisNN isNNP uglyVB textVBD andVBZ bigVBG longVBN textJJ", "sameVB forJJ thisJJ oneNN"], "topic");
+			TextProcesser TextProcesser = null;
+			OutputObj realOutput = TextProcesser.process(new String[]{("thisNN isNNP uglyVB textVBD andVBZ bigVBG longVBN textJJ")}, "topic");
 
 			// Make the assert.
 			assertEquals(expectedOutput, realOutput);
-		*/
 	}
+
+	@Test
+	@DisplayName("GetTweet not throwing exceptions")
+	void getTweetTest() throws IOException
+	{
+		assertDoesNotThrow(() -> GetTweet.main(new String[]{"man","woman"}));
+	}
+
+	@Test
+	@DisplayName("DeleteUsers not throwing exceptions")
+	void deleteUsersTest() throws IOException
+	{
+		assertDoesNotThrow(() -> deleteUser());
+	}
+
 }

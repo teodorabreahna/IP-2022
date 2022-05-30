@@ -2,7 +2,6 @@ import React from "react";
 
 function About() {
     return (
-       <section className="section2"> 
         <div className="im-pr-about">
 
             <div className="info-about">
@@ -12,7 +11,6 @@ function About() {
 
             <img src="Resources/mental-6841357.svg" alt="mentalSVG" />
         </div>
-       </section> 
     );
 }
 

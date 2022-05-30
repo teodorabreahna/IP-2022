@@ -9,3 +9,9 @@ Each team created a Trello Board for managing their tasks:
 2. Crawler: https://trello.com/b/KuPH34Ot/ip-crawler
 3. Data Processing: https://trello.com/b/buCno7jI/se-data-processing
 4. Statistics: https://trello.com/b/NbELmNg3/ip-statistics
+
+Link to Heroku: 
+1. Web Interface: https://frontend-ip.herokuapp.com
+2. Crawler: https://crawler-ip.herokuapp.com
+3. Statistics: https://stats-ip.herokuapp.com
+4. Data Processing: https://dataprocessing-ip.herokuapp.com
